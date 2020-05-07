@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire - Gráficos</title>
+    <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="script-umidade.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            padding: 0 0 0;
+        }
+        
+        .btngrafico {
+            margin-top: 0;
+            width: 500px;
+            height: 100px;
+            font-size: 2em;
+            border: double turquoise 5px;
+            background: transparent;
+            margin-left: 25%;
+            color: turquoise;
+            transition: 1s;
+        }
+        
+        .btngrafico:hover {
+            background: turquoise;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:80%; height: 100vh; background-color: black;  margin-left: 10%; margin-top:15%">
+        <canvas id="c_grafico2" style=" border: turquoise 5px solid;"></canvas>
+    </div>
+
+    <a href="temperatura.html"> <button class="btngrafico">Ver graficos de temperatura</button></a><br>
+
+
+</body>
+
+
+
+
+</html>
