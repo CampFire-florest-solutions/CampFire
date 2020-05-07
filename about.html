@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="imagens/favicon.png" />
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
+    <title>About</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <section id="campo1" class="c1">
+        <header id="home">
+
+            <nav id="menu">
+
+                <ul>
+
+
+                    <li>
+                        <a href="login.html">Acesse já</a></li>
+                    <li>
+                        <a href="cadastro.html">Cadastre-se</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="texto1">
+                <h1>CAMPFIRE</h1>
+                <p>A solucão digital que proteje as florestas
+                    <br>contra os incêndios e as queimadas</p>
+
+                <a href=""> <button id="mais">Veja mais</button></a>
+
+            </div>
+        </header>
+
+
+
+
+    </section>
+    <section id="campo2" class="sectionimagem">
+        <h1 id="soluction">CampFire - a solucão que protege a natureza</h1>
+        <br>
+        <p>
+            Conforme o tempo passa, é perceptível o quão drástico torna-se a mudança climática no mundo. Tal mudança é parcialmente responsável por diversos problemas na sociedade em que vivemos. Como exemplo, pode-se citar os incêndios florestais. O ano de 2019
+            e o início de 2020 foram marcados pelos incêndios florestais em várias partes do mundo, no Brasil, o número de incêndios entre janeiro e agosto de 2019 é o dobro do mesmo período do ano anterior
+        </p>
+        <p>
+            Os incêndios aumentarão a crise climática por conta das emissões de carbono provenientes da queima de matéria orgânica. As áreas afetadas serão mais vulneráveis às secas, inundações e outros efeitos das mudanças climáticas devido à falta de cobertura
+            vegetal. A perda de floresta reduzirá também a capacidade de absorção do dióxido de carbono por parte dos ecossistemas. A geração e a dispersão da fumaça comprometem a qualidade do ar de várias regiões próximas aos incêndios e cidades mais
+            afastadas como o que foi vivenciado em São Paulo nos incêndios ocorridos em 2019 na Amazônia. O impacto imediato dos incêndios na biodiversidade causa a morte de milhares de animais e plantas que habitam as florestas. Do mesmo modo, os incêndios
+            causam grandes problemas sociais, econômicos e de saúde pública.
+
+
+        </p>
+        <button onclick="mais()" id="botao">ler mais</button>
+        <p id="maistexto" style="display: none;">
+            Pensando nos impactos que os incêndios causam, o grupo CampFire tomou a iniciativa de criar uma solução para que os problemas em questão terminem. Essa solução baseia-se em instalar um sensor em determinada árvore e outro em uma outra árvore, num raio
+            de aproximadamente 50metros quadrados. Ela pode abranger até 5km no máximo. Esse sensor tem como finalidade indicar se o local está com temperatura elevada, o que será mostrado em um sistema. Sistema esse que mostrará se o local se apresenta
+            estável, em risco e até mesmo se o local já sofre um incêndio. Caso a área esteja em chamas, o sensor mandará um sinal para a antena que alertará a rede do proprietário. Assim, podem-se ser evitadas queimadas e incêndios, tanto naturais quanto
+            causados pelo homem. Dessa forma, o incêndio poderá ser contido ainda em pequenas escalas. Temos como principais clientes qualquer um que se vê na necessidade de ter um sensor para monitorar sua floresta contra incêndios: donos de áreas rurais,
+            como fazendas, florestas e reflorestamentos ou empresas que contam com as florestas plantadas como matéria-prima para seus produtos e que necessitem de uma tecnologia para monitoramento e detecção afim de prevenir os incêndios.
+
+
+        </p><br>
+
+
+
+
+</body>
+
+</html>
+<script>
+    maistexto.innerHtml = " ";
+
+    function mais() {
+        botao.style.display = "none";
+        campo2.style.height = "150vh";
+
+        maistexto.style.display = "block"
+    }
+</script>

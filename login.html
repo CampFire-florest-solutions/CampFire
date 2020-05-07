@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+
+    <title>Login/Cadastro</title>
+</head>
+
+<body background="img/img4.jpg">
+    <header id="home">
+
+        <nav id="menu">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                </ul>
+        </nav>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-seja">Seja bem-vindo</h2>
+                <p class="description">Deseja logar?</p>
+                <button class="btn btn-primeiro" id="signin">Acessar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-segunda">Cadastrar-se</h2>
+                <form class="form" action="graficos.html">
+                    <input type="email" placeholder="Email:">
+                    <input type="number" placeholder="Seu ID:">
+                    <input type="password" placeholder="Senha:">
+                    <button class="btn btn-segundo">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-seja">Olá</h2>
+                <p class="description">Faça seu cadastro,caso nao tenha ainda</p>
+                <button id="signup" class="btn btn-primeiro">Inscreva-se</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-segunda">Acessar conta</h2>
+                <form class="form" action="temperatura.html" id="login">
+                    <input type="number" placeholder="Seu ID:" id="idusuario">
+                    <input type="password" placeholder="Senha:" id="idsenha">
+                    <a href="#" class="password" onclick="senha()">Esqueceu sua senha?</a>
+                    <button onclick="validar()" class="btn btn-segundo">Acessar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var btnSignin = document.querySelector("#signin");
+    var btnSignup = document.querySelector("#signup");
+
+    var body = document.querySelector("body");
+
+    btnSignin.addEventListener("click", function() {
+        body.className = "sign-in-js";
+    });
+    btnSignup.addEventListener("click", function() {
+        body.className = "sign-up-js";
+    });
+
+    function senha() {
+        alert("Mandaremos uma nova senha em seu email");
+    }
+
+    function validar() {
+
+
+        if (idusuario.value == "0000" && idsenha.value == "123") {
+            window.location.href = "temperatura.html"
+
+        } else {
+            login.action = "#";
+            alert("usuario ou senha invalidos ");
+
+
+        }
+
+
+    }
+</script>
