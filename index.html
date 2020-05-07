@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="imagens/favicon.png" />
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
+    <title>CampFire - home</title>
+
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <section id="campo1" class="c1">
+        <header id="home">
+
+            <nav id="menu">
+
+                <ul>
+
+
+                    <li>
+                        <a href="login.html">Acesse já</a></li>
+                    <li>
+                        <a href="login.html">Cadastre-se</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="texto1">
+                <h1>CAMPFIRE</h1>
+                <p>A solucão digital que proteje as florestas
+                    <br>contra os incêndios e as queimadas</p>
+
+                <a href="about.html"> <button id="mais">Veja mais</button></a>
+
+            </div>
+        </header>
+
+
+
+
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="black">
+
+            <b>  <h1>CONHEÇA <span style="color: rgb(255, 255, 255);">NOSSA SOLUÇÃO.</span></h1></b>
+            <p class="texto">Se você está em busa de acabar com os incendios em sua propriedade temos um soluçao pode servir perfeitamente para você, contamos com sensores que vão capturar informaçoes de temperatura da sua propriedade e lhe mostrar em um sitema super
+                acessivel. Entre já em contato e saiba mais</p>
+            <p class="logoRodape">CampFire</p>
+        </div>
+
+    </section>
+
+    <section class="c1">
+
+        <div class="conteudo">
+            <div class="simulador">
+                <h1>Emulação de Custos </h1>
+                <p>Diametro da propriedade em km²</p>
+                <br>
+                <input type="number" id="area" class="inpt" placeholder="" onkeyup="calculo()">
+                <div id="texto"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="campo6" class="contato">
+
+
+        <form class="box" action="home.html" method="post">
+            <h1>Contato</h1>
+            <input type="text" name="" placeholder="Nome" id="login" autocomplete="off">
+            <input type="text" name="" placeholder="Nome Institucional" id="login" autocomplete="off">
+
+            <input type="text" name="" placeholder="telefone" id="login" autocomplete="off">
+
+            <input type="text" name="" placeholder="emai" id="senha">
+            <textarea name="" id="" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
+            <input type="button" name="" value="Enviar mensagem" onclick="validar()">
+
+        </form>
+        <div class="maisinfo">
+            <h1>Mais informações</h1>
+            <p>E-mai: 201grupo4a@bandtec.com.br </p><br>
+            <p>telefone: (11) 93045-6377</p><br>
+            <p>telefone: (11) 93045-6377</p>
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
+<script>
+    function calculo() {
+        var calculo_hectare = Number(area.value) * 50;
+        var arduino_P_m2 = calculo_hectare / 5;
+        var preco_instalacao = Number(35) * arduino_P_m2;
+        texto.innerHTML = `De acordo com sua areá sera instalado: <span style="color:white;"> ${arduino_P_m2} sensores </span> e isso custará: <span style="color:white;">R$${preco_instalacao}</sapam>`
+    }
+</script>
