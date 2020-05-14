@@ -7,13 +7,13 @@ body {
 
 .home {
     height: 100vh;
-    background: url(imagens/bg.jpg);
+    background: url(../imagens/bg.JPG);
     background-size: cover;
 }
 
 .home2 {
     height: 135vh;
-    background: url(imagens/bg3.jpg) black;
+    background: url(../imagens/bg3.jpg) black;
     background-size: cover;
     background-position: center;
 }
@@ -58,7 +58,7 @@ body {
     width: 33%;
     margin: 0;
     height: 100%;
-    background: url(imagens/contatogreen.jpg) mediumseagreen;
+    background: url(../imagens/contatogreen.jpg) mediumseagreen;
     background-size: cover;
     background-position: center;
     text-align: center;
