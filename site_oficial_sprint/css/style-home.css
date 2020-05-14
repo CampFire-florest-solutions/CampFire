@@ -271,13 +271,12 @@ body {
 .Descvideo p {
     font-size: 1.5em;
     color: white;
-    margin-top: 4%;
-    width: 300px;
+    margin-top: 0%;
+    width: 343px;
     text-align: left;
     margin-left: 25%;
     margin-bottom: 10px;
 }
-
 .botaoMover {
     position: relative;
     width: 150px;
@@ -300,4 +299,11 @@ body {
 
 .video video:enabled {
     opacity: 1;
+}
+
+.footer{
+    padding: 1px;
+    color: #ffffff;
+    background-color: #556b2f;
+    text-align: center;
 }

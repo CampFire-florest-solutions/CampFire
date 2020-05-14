@@ -5,7 +5,7 @@ function trocar2() {
     if (tree3.checked == true) {
 
 
-        imagetre.src = "imagens/perfil.png";
+        imagetre.src = "imagens/alexandre.png";
         texto.innerHTML = `<span>Alexandre Diogo<span>`;
 
 
@@ -21,7 +21,7 @@ function trocar2() {
     } else if (tree2.checked == true) {
 
 
-        imagetre.src = "imagens/perfil3.png";
+        imagetre.src = "imagens/isabela.png";
         texto.innerHTML = `<span>Isabela Victoria<span>`;
 
 
@@ -38,7 +38,7 @@ function trocar() {
     if (one3.checked == true) {
 
 
-        imgone.src = "imagens/perfil.png";
+        imgone.src = "imagens/mathias.png";
         texto1.innerHTML = `<span>Mathias Carvalho<span>`;
 
 
@@ -55,7 +55,7 @@ function trocar() {
     } else if (one2.checked == true) {
 
 
-        imgone.src = "imagens/perfil3.png";
+        imgone.src = "imagens/juan.png";
         texto1.innerHTML = `<span>Mathueus Juan<span>`;
 
 
