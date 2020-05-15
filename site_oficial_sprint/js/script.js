@@ -14,7 +14,7 @@ function trocar2() {
     } else if (tree1.checked == true) {
 
 
-        imagetre.src = "imagens/perfil2.png";
+        imagetre.src = "imagens/integrantes/caue.jpg";
         texto.innerHTML = `<span>Cauê Pontes<span>`;
 
 
@@ -47,7 +47,7 @@ function trocar() {
     } else if (one1.checked == true) {
 
 
-        imgone.src = "imagens/perfil2.png";
+        imgone.src = "imagens/integrantes/leonardo.jpg";
         texto1.innerHTML = `<span>Leonardo Victor<span>`;
 
 
