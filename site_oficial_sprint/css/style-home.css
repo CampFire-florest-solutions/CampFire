@@ -277,6 +277,7 @@ body {
     margin-left: 25%;
     margin-bottom: 10px;
 }
+
 .botaoMover {
     position: relative;
     width: 150px;
@@ -301,7 +302,124 @@ body {
     opacity: 1;
 }
 
-.footer{
+.sobre {
+    height: 135vh;
+    background: url(../imagens/bg5.jpg) black;
+    background-size: cover;
+    background-position: center;
+}
+
+.itens {
+    background: linear-gradient(rgba(128, 128, 128, 0.247), #262626);
+    width: 100%;
+    height: 306px;
+    top: 0vh;
+    position: relative;
+    text-align: center;
+    font-size: 1.1em;
+    border-bottom: mediumseagreen 3px solid;
+}
+.valores {
+    width: 200px;
+    margin-left: 16px;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-right: 42vh;
+}
+
+.valores img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 20%;
+}
+
+.valores h3 {
+    color: #ffffff;
+}
+
+.vissao {
+    width: 200px;
+    margin-left: 16px;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-right: 14vh;
+}
+
+.vissao img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 20%;
+}
+
+.missao {
+    width: 200px;
+    margin-left: 16px;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-right: 14vh;
+}
+
+.missao img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 20%;
+}
+
+.item1 {
+    background: linear-gradient(rgba(128, 128, 128, 0.247), #262626);
+    width: 40%;
+    height: 370px;
+    position: relative;
+    float: right;
+    border-bottom: mediumseagreen 3px solid;
+    padding-top: 10px;
+    padding: 25px;
+    top: 17vh;
+    position: relative;
+    margin-right: 8vh;
+    color: white;
+}
+
+.item2 {
+    background: linear-gradient(rgba(128, 128, 128, 0.247), #262626);
+    width: 40%;
+    height: 370px;
+    position: relative;
+    float: right;
+    border-bottom: mediumseagreen 3px solid;
+    padding: 25px;
+    top: 17vh;
+    position: relative;
+    margin-right: 10vh;
+    color: white;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2.1em;
+    text-transform: uppercase;
+}
+
+.item1 p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.item2 p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.footer {
     padding: 1px;
     color: #ffffff;
     background-color: #556b2f;
