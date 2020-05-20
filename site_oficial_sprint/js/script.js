@@ -86,12 +86,16 @@ function mover() {
         alert("nao foi possivel visualizar o video");
     }
 
-
+    
 }
 function abrir_menu(x){
     x.classList.toggle("change");
-    document.getElementById("nav-lateral").style.width = "250px";
+    document.getElementById("navLateral").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 function fecharNav(){
-    document.getElementById("nav-lateral").style.width = "0";
+    document.getElementById("navLateral").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
 }
