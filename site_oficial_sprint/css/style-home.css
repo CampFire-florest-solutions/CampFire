@@ -385,6 +385,7 @@ body {
     text-align: center;
     font-size: 1.1em;
     border-bottom: mediumseagreen 3px solid;
+    border-top: mediumseagreen 3px solid;
 }
 .valores {
     width: 200px;
