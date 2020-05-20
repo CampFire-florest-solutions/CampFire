@@ -88,3 +88,10 @@ function mover() {
 
 
 }
+function abrir_menu(x){
+    x.classList.toggle("change");
+    document.getElementById("nav-lateral").style.width = "250px";
+}
+function fecharNav(){
+    document.getElementById("nav-lateral").style.width = "0";
+}
