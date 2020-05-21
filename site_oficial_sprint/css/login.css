@@ -2,16 +2,21 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(../imagens/fundo_floresta_login.jpg);
-    background-size: cover; 
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 .div_form{
     background-color: snow;
-    width: 27%;
+    width: 26%;
     max-width: 400px;
-    height: 43vh;
+    height: 52vh;
     margin-left: 110vh;
     margin-top: 30vh;
+    border-radius: 11px;
 }
 
 .div_form span{
@@ -34,4 +39,60 @@ body {
 .div_form input[type=email]:focus, .div_form input[type=text]:focus {
     background-color: #ddd;
     outline: none;
+}
+
+.div_form button{
+  color: white;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.div_form button[onclick=btn_entrar]{
+    background-color: #4CAF50;
+    padding: 17px 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 59px;
+    right: -178px;
+    height: 47px;
+    top: -58px;
+    width: 50%;
+    border-bottom-right-radius: 9px;
+}
+.div_form button[onclick=btn_entrar];:hover{
+    opacity: 1;
+}
+
+.div_form button[onclick=btn_voltar]{
+    background-color: #c51616;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+    cursor: pointer;
+    position: initial;
+    bottom: 79px;
+    right: 140px;
+    width: 51%;
+    border-bottom-left-radius: 12px;
+}
+.div_form button[onclick=btn_voltar];:hover{
+    opacity: 1;
+}
+.btn_teste{
+    -webkit-appearance: none;
+}
+
+.btn_teste button[onclick=subir()]{
+    
+    background-color: #c51616;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+    cursor: pointer;
+    position: initial;
+    /* bottom: 79px;
+    right: 140px;
+    width: 51%; */
+    border-radius: 12px;
 }

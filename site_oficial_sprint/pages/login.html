@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
     <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
     <title>CampFire-login</title>
 
 </head>
 <body>
+    <button type="submit" class="btn_teste" onclick="subir()">teste</button>
     <div class="div_form">
      <h3>Login</h3>
      <br>
      <span>Email:</span> <br>
-     <input type="email" placeholder="email" id="user_email"> <br>
+     <input type="email" placeholder="Email" id="user_email" required> <br>
      <span>Senha:</span> <br>
-     <input type="text" placeholder="senha">
+     <input type="text" placeholder="Senha" id="user-senha" required>
+     <br> <br>
+     <button onclick="btn_voltar">Sair</button>
+     <button onclick="btn_entrar">Entrar</button>
     </div>
+    
 </body>
 </html>
