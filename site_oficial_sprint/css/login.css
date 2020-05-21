@@ -4,6 +4,14 @@ body {
     background: #07040d;
     transition: background-color .5s;
 }
+
+
+.home {
+    height: 100vh;
+    background: url(../imagens/bg.JPG);
+    background-size: cover;
+}
+
 .container{
     display: inline-block;
     cursor: pointer;
@@ -16,6 +24,7 @@ body {
     background-color: #556b2f;
     margin: 6px 0;
     transition: 0.4s;
+    margin-left: 10px;
 }
   
 .change .barra1 {
