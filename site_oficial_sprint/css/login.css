@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #07040d;
+    transition: background-color .5s;
+}
+.container{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 49px;
+}
+
+.barra1, .barra2, .barra3 {
+    width: 35px;
+    height: 5px;
+    background-color: #556b2f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .barra1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .barra2 {opacity: 0;}
+  
+.change .barra3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navLateral{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.navLateral a {
+    padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+}
+
+.navLateral a:hover {
+     color: snow;
+}
+
+.navLateral .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .nav-lateral {padding-top: 15px;}
+    .nav-lateral a {font-size: 18px;}
+}
+.menu {
+    background: transparent;
+    width: 100%;
+    top: 0;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu ul li a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.menu ul li a:hover {
+    color: mediumseagreen;
+}
+
+.menu ul li img {
+    width: 100px;
+    height: 95%;
+    margin-top: 1px;
+}
