@@ -1,6 +1,6 @@
 function btn_entrar(){
     var validar_email = user_email.value == "adimin";
-    var validar_senha = user-senha.value == "123456";
+    var validar_senha = user_senha.value == "123456";
 
     if (validar_email && validar_senha) {
         location.href = '#';
@@ -15,4 +15,7 @@ function btn_entrar(){
             alert("login e senha incorretos")
         }
     }
+}
+function btn_voltar(){
+    location.href = '../site-index.html'
 }

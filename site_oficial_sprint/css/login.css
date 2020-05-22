@@ -11,9 +11,9 @@ body {
 }
 .div_form{
     background-color: snow;
-    width: 26%;
+    width: 355px;
     max-width: 400px;
-    height: 52vh;
+    height: 58vh;
     margin-left: 110vh;
     margin-top: 30vh;
     border-radius: 11px;
@@ -47,24 +47,24 @@ body {
   margin-bottom:10px;
 }
 
-.div_form button[onclick=btn_entrar]{
+.div_form .sing_in{
     background-color: #4CAF50;
     padding: 17px 20px;
     border: none;
     cursor: pointer;
     position: relative;
     bottom: 59px;
-    right: -178px;
-    height: 47px;
+    right: -175px;
+    height: 49px;
     top: -58px;
-    width: 50%;
+    width: 51%;
     border-bottom-right-radius: 9px;
 }
-.div_form button[onclick=btn_entrar];:hover{
+.div_form .sing_in:hover{
     opacity: 1;
 }
 
-.div_form button[onclick=btn_voltar]{
+.div_form .back{
     background-color: #c51616;
     color: white;
     padding: 16px 0px;
@@ -73,10 +73,10 @@ body {
     position: initial;
     bottom: 79px;
     right: 140px;
-    width: 51%;
+    width: 50%;
     border-bottom-left-radius: 12px;
 }
-.div_form button[onclick=btn_voltar];:hover{
+.div_form .back:hover{
     opacity: 1;
 }
 .btn_teste{
