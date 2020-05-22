@@ -11,9 +11,9 @@ function btn_entrar(){
         if (!validar_senha) {
             alert("senha incorreta");
         }
-        if (!validar_email && !validar_senha) {
-            alert("login e senha incorretos")
-        }
+        // if (!validar_email || !validar_senha) {
+        //     alert("login e senha incorretos")
+        // }
     }
 }
 function btn_voltar(){
