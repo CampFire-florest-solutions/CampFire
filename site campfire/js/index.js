@@ -5,7 +5,7 @@ function trocar2() {
     if (tree3.checked == true) {
 
 
-        imagetre.src = "/imagens/integrantes/alexandre.png";
+        imagetre.src = "../imagens/integrantes/alexandre.png";
         texto.innerHTML = `<span>Alexandre Diogo<span>`;
 
 
@@ -89,9 +89,13 @@ function mover() {
 
 }
 
-function menu() {
-    if () {
-        imgmenu.src = "./imagens/icons/menufechar.png";
-    }
+// function menu() {
+//     if () {
+//         imgmenu.src = "./imagens/icons/menufechar.png";
+//     }
 
+// }
+
+function acesso(){
+    location.href = 'pages/login.html';
 }

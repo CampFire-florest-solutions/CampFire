@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../imagens/fundos/fundo_floresta_login.jpg);
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div_form{
+    background-color: snow;
+    width: 355px;
+    max-width: 400px;
+    height: 58vh;
+    margin-left: 110vh;
+    margin-top: 30vh;
+    border-radius: 11px;
+}
+
+.div_form span{
+    margin-left: 4vh;
+}
+
+.div_form h3{
+    text-align: center;
+}
+.div_form input[type=email], .div_form input[type=text] {
+    width: 78%;
+    padding: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    margin-left: 20px;
+    margin-top: 23px;
+}
+
+.div_form input[type=email]:focus, .div_form input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.div_form button{
+  color: white;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.div_form .sing_in{
+    background-color: #4CAF50;
+    padding: 17px 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 59px;
+    right: -175px;
+    height: 49px;
+    top: -58px;
+    width: 51%;
+    border-bottom-right-radius: 9px;
+}
+.div_form .sing_in:hover{
+    opacity: 1;
+}
+
+.div_form .back{
+    background-color: #c51616;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+    cursor: pointer;
+    position: initial;
+    bottom: 79px;
+    right: 140px;
+    width: 50%;
+    border-bottom-left-radius: 12px;
+}
+.div_form .back:hover{
+    opacity: 1;
+}
+.btn_teste{
+    -webkit-appearance: none;
+}
+
+.btn_teste button[onclick=subir()]{
+    
+    background-color: #c51616;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+    cursor: pointer;
+    position: initial;
+    border-radius: 12px;
+}
+/* usando # pois o getElement nao pega class */
+#barra_erro{
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -52px;
+    background-color: #333;
+    color: antiquewhite;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+    font-size: 17px;
+}
+#barra_erro.mostrar{
+    visibility: visible;
+    -webkit-animation: aparecer 0.5s, sumir 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/* pegando animações da net  */
+@-webkit-keyframes fadein{
+    from{top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }

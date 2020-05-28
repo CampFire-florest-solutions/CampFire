@@ -23,5 +23,5 @@ function btn_entrar(){
     }
 }
 function btn_voltar(){
-    location.href = '../site-index.html'
+    location.href = '../index.html'
 }
