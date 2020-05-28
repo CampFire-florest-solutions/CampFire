@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+    <title>Campfire</title>
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <a href="#home"> <button><img src="imagens/icons/home.png" alt="Inicio"></button></a>
+        <a href="#about"> <button><img src="imagens/icons/about.png" alt="Sobre"></button></a>
+        <a href="#team"> <button><img src="imagens/icons/equipe.png" alt="Equipe"></button></a>
+        <a href="#video"><button><img src="imagens/icons/video.png" alt="Video"></button></a>
+        <a href="#contact"> <button><img src="imagens/icons/contato.png" alt="Contato"></button></a>
+
+    </div>
+    <section class="home" id="home">
+        <div class="textos">
+            <h1>CAMPFIRE</h1>
+            <div class="linha"></div>
+            <p>Sistema de Prevençao de incendios</p>
+            <button class="more">Ver Mais</button>
+
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="box_home">
+            <div class="box_home_item" class="one"></div>
+            <div class="box_home_item" class="two"></div>
+            <div class="box_home_item" class="tree"></div>
+
+        </div>
+    </section>
+    <section class="team" id="team">
+
+        <div class="intermedio">
+            <div class="one">
+                <input type="radio" id="one3" name="webmaster" value="0" checked onchange="trocar()" />
+                <input type="radio" id="one1" name="webmaster" value="1" onchange="trocar()" />
+                <input type="radio" id="one2" name="webmaster" value="2" onchange="trocar()" />
+                <br>
+                <img src="imagens/integrantes/mathias.png" alt="" id="imgone" class="imgone">
+                <h2 id="texto1">Mathias Carvalho</h2>
+
+
+            </div>
+            <div class="two">
+                <h1>hello</h1>
+                <p>Aqui voce pode observar nossos colaboradores e ideializadores deste projeto, que tanto se esforçam para sempre tazer o melhor para nossos clientes.
+                </p>
+
+            </div>
+            <div class="tree">
+                <input id="tree3" type="radio" name="webmaster1" value="0" onchange="trocar2()" checked />
+                <input id="tree1" type="radio" name="webmaster1" value="1" onchange="trocar2()" />
+                <input id="tree2" type="radio" name="webmaster1" value="2" onchange="trocar2()" />
+                <br>
+                <img src="imagens/integrantes/alexandre.png" alt="" id="imagetre" class="imgtree">
+                <h2 id="texto">Alexandre Diogo</h2>
+            </div>
+        </div>
+    </section>
+    <section class="video" id="video">
+        <div class="texto_videozin">
+            <span>Campfire</span>
+            <h1> Campfire - Solução</h1>
+            <div class="linha"></div>
+        </div>
+        <iframe class="videozin" src="https://www.youtube.com/embed/YMhP5u6n8g8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    </section>
+    <section class="contact" id="contact">
+
+    </section>
+</body>
+
+</html>
