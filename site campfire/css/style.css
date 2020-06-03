@@ -324,9 +324,29 @@
                 font-size: xx-large;
             }
 
-            .div_form input[type=email] , input[type=tel]{
+            .div_form input{
                 border-radius: 12px;
                 border: 3px green solid;
                 display: list-item;
-                
+                height: 33px;
             }
+
+            .div_form button{
+                background-color: whitesmoke;
+                border: olive 5px solid;
+                border-radius: 11px;
+                width: 109px;
+                height: 38px;
+                margin-top: 33px;
+                margin-left: 60px;
+                transform: 2s;
+                transition: 2s;
+            }
+            
+            .div_form button:hover{
+                background-color: paleturquoise;
+                opacity: 0.7;
+                width: 150px;
+                transition: 2s;
+            }
+            
