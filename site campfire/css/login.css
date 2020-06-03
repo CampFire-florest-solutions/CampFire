@@ -1,16 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../imagens/fundos/fundo_floresta_login.jpg);
     min-height: 380px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    background-color: #02001A;
     font-family: Arial, Helvetica, sans-serif;
 }
 .div_form{
-    background-color: snow;
+    background-color: whitesmoke;
+    border: solid 1px black;
+    box-shadow: 15px 15px 15px black;
     width: 355px;
     max-width: 400px;
     height: 58vh;

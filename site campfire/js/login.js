@@ -11,15 +11,7 @@ function btn_entrar(){
 
         setTimeout(function(){erro.className = erro.className.replace("mostrar",""); },
         3000)
-        // if (!validar_email) {
-        //     alert("email incorreto");
-        // }
-        // if (!validar_senha) {
-        //     alert("senha incorreta");
-        // }
-        //  if (!validar_email || !validar_senha) {
-        //      alert("login e senha incorretos")
-        // }
+
     }
 }
 function btn_voltar(){
