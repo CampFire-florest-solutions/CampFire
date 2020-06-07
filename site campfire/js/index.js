@@ -14,14 +14,14 @@ function trocar2() {
     } else if (tree1.checked == true) {
 
 
-        imagetre.src = "/imagens/integrantes/caue.jpg";
+        imagetre.src = "../imagens/integrantes/caue.jpg";
         texto.innerHTML = `<span>Cauê Pontes<span>`;
 
 
     } else if (tree2.checked == true) {
 
 
-        imagetre.src = "/imagens/integrantes/isabela.png";
+        imagetre.src = "../imagens/integrantes/isabela.png";
         texto.innerHTML = `<span>Isabela Victoria<span>`;
 
 
@@ -38,7 +38,7 @@ function trocar() {
     if (one3.checked == true) {
 
 
-        imgone.src = "/imagens/integrantes/mathias.png";
+        imgone.src = "../imagens/integrantes/mathias.png";
         texto1.innerHTML = `<span>Mathias Carvalho<span>`;
 
 
@@ -47,7 +47,7 @@ function trocar() {
     } else if (one1.checked == true) {
 
 
-        imgone.src = "/imagens/integrantes/leonardo.jpg";
+        imgone.src = "../imagens/integrantes/leonardo.jpg";
         texto1.innerHTML = `<span>Leonardo Victor<span>`;
 
 
@@ -55,7 +55,7 @@ function trocar() {
     } else if (one2.checked == true) {
 
 
-        imgone.src = "/imagens/integrantes/juan.png";
+        imgone.src = "../imagens/integrantes/juan.png";
         texto1.innerHTML = `<span>Mathueus Juan<span>`;
 
 

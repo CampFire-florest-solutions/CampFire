@@ -82,13 +82,33 @@
 
     </section>
     <section class="contact" id="contact">
-        <div class="div_form">
-            <h3>caso goste dos nossos serviços entre em contado</h3>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Telefone de contato">
-            <input type="text" placeholder="Senha">
-            <input type="text" placeholder="confirme a senha">
-            <button onclick="validar()">Enviar</button>
+
+        <div class="Pcadastro">
+            <form>
+                <label for="nomeSobrenome">Nome e sobrenome:</label>
+                <input type="text" id="nomeSobrenome" placeholder="Nome completo" 
+                class="input_padronizado" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="input_padronizado" required placeholder="marigildo@dominio.com.br">
+
+                <label for="telefoneContato">Telefone para contato:</label>
+                <input type="tel" id="telefoneContato" class="input_padronizado" required placeholder="Ex: (00) 00000-0000">
+
+                <div>
+                    <p>Como prefere o contato?</p>
+
+                    <label for="email-radio">
+                        <input type="radio" id="email-radio" name="contato" checked>Email
+                    </label>
+
+                    <label for="telefone-radio">
+                        <input type="radio" id="telefone-radio" name="contato">Telefone
+                    </label>
+                </div>
+
+                <button onclick="enviar_form" id="btn_form">Enviar</button>
+            </form>
         </div>
     </section>
 </body>
