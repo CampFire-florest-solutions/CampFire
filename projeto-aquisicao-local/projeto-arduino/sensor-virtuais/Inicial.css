@@ -1,0 +1,289 @@
+body {
+    margin: 0px;
+    padding: 0;
+    /* background-image: url(file:///C:/Users/Alexnadre/Desktop/__2_2x.png);*/
+    background: #1d182b;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    max-height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #322f46;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: #322f46;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 5px 5px 5px black;
+    position: fixed;
+}
+
+.menu_lateral {
+    width: 10vh;
+    float: left;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.781);
+    background: #322f46;
+}
+
+.Content_areas {
+    width: 90%;
+    height: 25vh;
+    background: transparent;
+    float: right;
+    margin-top: 15vh;
+    margin-right: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Content_areas .areas {
+    width: 23%;
+    height: 98%;
+    background-color: red;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.Content_areas .areas:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Content_areas .areas.area1 {
+    margin-right: 2%;
+    background-image: linear-gradient( rgb(7, 111, 247), rgb(118, 198, 245));
+}
+
+.Content_areas .areas.area2 {
+    margin-right: 2%;
+    background-image: linear-gradient( rgb(224, 6, 6), rgb(240, 107, 29));
+}
+
+.Content_areas .areas.area3 {
+    margin-right: 2%;
+    background-image: linear-gradient( rgb(92, 0, 92), rgb(172, 2, 172));
+}
+
+.Content_areas .areas.area4 {
+    margin-right: 0%;
+    background-image: linear-gradient( rgb(0, 92, 84), rgb(4, 199, 134));
+}
+
+.Nomearea {
+    color: white;
+    margin-left: 10px;
+    font-size: 1.4em;
+    font-family: sans-serif;
+}
+
+.ico_grafico {
+    width: 70px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.valor {
+    color: white;
+    float: right;
+    margin-right: 30px;
+    margin-top: 45px;
+    font-size: 2em;
+    font-weight: bold;
+    width: 130px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.content_grafico {
+    width: 90%;
+    height: 75vh;
+    background: transparent;
+    float: right;
+    margin-top: 5vh;
+    margin-right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafico_temperatura {
+    width: 59%;
+    background: #1d182b;
+    height: 95%;
+    box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.781);
+    margin-left: 1%;
+}
+
+.grafico_umidade {
+    width: 40%;
+    margin-left: 2%;
+    background: #1d182b;
+    height: 95%;
+    box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.781);
+}
+
+.titulo_grafico {
+    text-align: start;
+    width: 95%;
+    margin: 0;
+    margin-top: 15px;
+    color: darkgray;
+    margin-left: 20px;
+    font-family: sans-serif;
+    float: left;
+    font-size: 1.4em;
+}
+
+.notification {
+    width: 30px;
+    background: transparent;
+    float: right;
+    height: 30px;
+    margin-right: 30px;
+    background-image: url(icons/notification.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.user {
+    width: 30px;
+    background: transparent;
+    float: right;
+    height: 30px;
+    margin-right: 30px;
+    background-image: url(icons/user.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.box_notficacao {
+    position: absolute;
+    width: 25%;
+    height: 35vh;
+    background: rgba(0, 0, 0, 0.966);
+    right: 70px;
+    top: 11vh;
+    transition: 2s;
+    display: none;
+}
+
+.box_user {
+    position: absolute;
+    width: 25%;
+    height: 35vh;
+    background: rgba(0, 0, 0, 0.966);
+    right: 20px;
+    top: 11vh;
+    transition: 2s;
+    display: none;
+}
+
+.box_user .sub_user {
+    width: 100%;
+    color: gray;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.box_user .sub_user:hover {
+    color: white;
+}
+
+.relogio {
+    font-size: 2em;
+    color: white;
+    float: left;
+    letter-spacing: 4px;
+    margin-top: -10px;
+    margin-left: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.of {
+    width: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    background: transparent;
+    height: 30px;
+    float: right;
+    background-image: url(icons/of.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.titulo {
+    font-size: 2em;
+    color: white;
+    float: left;
+    letter-spacing: 4px;
+    margin-top: -10px;
+    margin-left: 300px;
+}
+
+.titulo img {
+    width: 40px;
+}
+
+.topic_menu {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    float: right;
+    align-items: center;
+}
+
+.topic_menu.home {
+    margin-top: 100px;
+}
+
+.topic_menu.more {
+    margin-top: 30px;
+}
+
+.topic_menu .icon_menu {
+    width: 40px;
+    margin-left: 5px;
+    float: right;
+}
+
+.topic_menu .Line_menu {
+    background-color: #4169e1;
+    width: 5px;
+    height: 100%;
+    float: left;
+    margin-left: 0;
+    border-radius: 30px;
+    visibility: hidden;
+}
+
+.topic_menu .Line_menu.home {
+    visibility: visible;
+}
+
+.topic_menu:hover .Line_menu {
+    visibility: visible;
+}
