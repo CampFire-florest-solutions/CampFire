@@ -89,13 +89,55 @@ function mover() {
 
 }
 
-// function menu() {
-//     if () {
-//         imgmenu.src = "./imagens/icons/menufechar.png";
-//     }
-
-// }
-
-function acesso(){
+function acesso() {
     location.href = 'pages/login.html';
 }
+
+function digitar() {
+    let quantidade = mensagem.value.length;
+    let restante = 500 - quantidade;
+    restantes.innerHTML = restante;
+}
+function scrollBanner() {
+    var scrollPos = window.scrollY;
+
+    if (scrollPos <= 700) {
+        document.getElementById('um').className = 'ativado';
+        document.getElementById('dois').className = 'icone';
+        document.getElementById('tres').className = 'icone';
+        document.getElementById('quatro').className = 'icone';
+        document.getElementById('cinco').className = 'icone';
+        [data-sectio]
+    }
+    else if (scrollPos <= 1400) {
+        document.getElementById('um').className = 'icone';
+        document.getElementById('dois').className = 'ativado';
+        document.getElementById('tres').className = 'icone';
+        document.getElementById('quatro').className = 'icone';
+        document.getElementById('cinco').className = 'icone';
+    }
+    else if (scrollPos <= 2100) {
+        document.getElementById('um').className = 'icone';
+        document.getElementById('dois').className = 'icone';
+        document.getElementById('tres').className = 'ativado';
+        document.getElementById('quatro').className = 'icone';
+        document.getElementById('cinco').className = 'icone';
+    }
+    else if (scrollPos <= 2800) {
+        document.getElementById('um').className = 'icone';
+        document.getElementById('dois').className = 'icone';
+        document.getElementById('tres').className = 'icone';
+        document.getElementById('quatro').className = 'ativado';
+        document.getElementById('cinco').className = 'icone';
+    }
+    else if (scrollpos <= 3500) {
+        document.getElementById('um').className = 'icone';
+        document.getElementById('dois').className = 'icone';
+        document.getElementById('tres').className = 'icone';
+        document.getElementById('quatro').className = 'icone';
+        document.getElementById('cinco').className = 'ativado';
+    }
+    
+}
+
+window.addEventListener('scroll', scrollBanner);

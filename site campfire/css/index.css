@@ -1,346 +1,396 @@
-       /*importando fontes para a pagina */
+ /*importando fontes para a pagina */
 
-            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap');
-            /*configurando a  pagina */
+ ::-webkit-scrollbar-track {
+    background-color: #322f46;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 239, 242);
+    background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
+    border-radius: 10px;
+}
 
-            html {
-                scroll-behavior: smooth;
-                transition: 2s;
-                transition-delay: 2s;
-            }
-            /*configurando  o corpo da pagina */
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap');
+ /*configurando a  pagina */
 
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            /*configurando a o menu da pagina*/
 
-            .menu {
-                width: 16vh;
-                float: left;
-                height: 100vh;
-                position: fixed;
-                box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.781);
-                background: #322f46;
-                /* flex-direction: column;
-                border-radius: 50px;
-                margin-left: 10px;
-                border: solid 1px white; */
-                transition: 1s;
-            }
+ /*configurando  o corpo da pagina */
 
-            .menu img {
-                margin-top: 23px;
-                border-radius: 23%;
-                width: 10vh;
-                margin-left: 2vh;
-                background-image: linear-gradient( rgb(92, 0, 92), rgb(172, 2, 172));
-                height: 9vh;
-                /* border: double 8px mediumseagreen; */
-                cursor: pointer;
-                display: table-column;
-            }
-            /*configurando a o menu da pagina quando o usuario passa por cima com o mouse*/
+ body {
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+ }
 
-            .menu button:hover {
-                background: black;
-            }
+ /*configurando a o menu da pagina*/
 
-            .menu button:hover img {
-                filter: invert(1);
-            }
-            /*configurando as sections da pagina*/
+ .menu {
+     width: 7vw;
+     float: left;
+     height: 100%;
+     position: fixed;
+     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.781);
+     background: #322f46;
+     border-right: 2px solid rgb(0, 239, 242);
+ }
+ .ativado {
+     background: linear-gradient(0deg, rgba(0, 239, 242, 0.5) 0%, rgba(0, 255, 158, 0.5) 100%);
+     color: white;
+     margin-top: 2vw;
+     border-radius: 30%;
+     width: auto;
+     height: auto;
+     font-size: 3vw;
+     text-align: center;
+     padding: 5%;
+     transform: scale(1.1);
+     transition: 0.5s;
+ }
 
-            .home {
-                width: 100%;
-                float: right;
-                height: 100vh;
-                background: white;
-                background-size: cover;
-                background-position: center;
-                transition: 1s;
-            }
+ .centro {
+     height: 80%;
+     width: 70%;
+     margin: 15%;
+ }
 
-            .about {
-                width: 100%;
-                float: right;
-                height: 100vh;
-                background: mediumseagreen;
-                transition: 1s;
-            }
+ .centro .icone {
+     margin-top: 2vw;
+     border-radius: 30%;
+     width: auto;
+     height: auto;
+     font-size: 3vw;
+     color: black;
+     text-align: center;
+     padding: 5%;
+     background: rgb(0, 239, 242);
+     background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
+ }
 
-            .team {
-                width: 88vw;
-                float: right;
-                height: 100vh;
-                transition: 1s;
-            }
+ .icone:hover {
+     color: white;
+     transition: 0.5s;
+     transform: scale(1.1);
+     background: linear-gradient(0deg, rgba(0, 239, 242, 0.5) 0%, rgba(0, 255, 158, 0.5) 100%);
+ }
 
-            .video {
-                width: 100%;
-                float: right;
-                height: 100vh;
-                background: white;
-                transition: 1s;
-            }
+ .centro img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2vw;
+    border-bottom: 0.25vw solid rgba(0, 239, 242, 1);
+ }
+ /*configurando as sections da pagina*/
 
-            .contact {
-                width: 100%;
-                float: right;
-                height: 100vh;
-                background: mediumseagreen;
-                transition: 1s;
-            }
-            /*configurando a section team da pagina*/
+ .home {
+     width: 100%;
+     float: right;
+     height: 100vh;
+     background: url(../imagens/fundos/home1.png);
+     background-size: cover;
+     background-position: center;
+     transition: 1s;
+ }
 
-            .intermedio {
-                width: 90%;
-                margin-left: 2%;
-                height: 60vh;
-                display: flex;
-                background: transparent;
-                margin-top: 20vh;
-            }
+ .about {
+     width: 100%;
+     float: right;
+     height: 100vh;
+     transition: 1s;
+     background: rgb(255,255,255);
+     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(127,130,130,1) 40%, rgba(69,80,80,1) 64%, rgba(37,51,52,1) 100%);
+ }
 
-            .one {
-                width: 33%;
-                margin: 0;
-                height: 100%;
-                background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
-                text-align: center;
-                color: white;
-                margin: 0.3%;
-                transition: 1s;
-            }
+ .team {
+     width: 100%;
+     float: right;
+     height: 100vh;
+     transition: 1s;
+    background: white;
+ }
 
-            .one img {
-                width: 200px;
-                height: 200px;
-                border-radius: 100%;
-                background: white;
-                position: relative;
-                margin-top: 20%;
-            }
+ .video {
+     width: 100%;
+     float: right;
+     height: 100vh;
+     background: white;
+     transition: 1s;
+ }
 
-            .one h2 {
-                color: white;
-                position: relative;
-                top: 2%;
-            }
+ .contact {
+     width: 100%;
+     float: right;
+     height: 100%;
+     background: mediumseagreen;
+     transition: 1s;
+ }
 
-            .two {
-                width: 33%;
-                margin: 0;
-                height: 100%;
-                background: url(../imagens/fundos/contatogreen.jpg) mediumseagreen;
-                background-size: cover;
-                background-position: center;
-                text-align: center;
-                color: white;
-                font-size: 1.3em;
-                margin: 0.3%;
-                transition: 1s;
-            }
+ /*configurando a section team da pagina*/
 
-            .two h1 {
-                color: rgb(206, 206, 206);
-            }
+ .intermedio {
+     width: 80%;
+     margin-left: 12%;
+     height: 60vh;
+     display: flex;
+     background: transparent;
+     margin-top: 20vh;
+ }
 
-            .two:hover {
-                transform: scale(1.1);
-            }
+ .one {
+     width: 33%;
+     margin: 0;
+     height: 100%;
+     background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
+     text-align: center;
+     color: white;
+     margin: 0.3%;
+     transition: 1s;
+ }
 
-            .one:hover {
-                transform: scale(1.1);
-            }
+ .one img {
+     width: 200px;
+     height: 200px;
+     border-radius: 100%;
+     background: white;
+     position: relative;
+     margin-top: 20%;
+ }
 
-            .tree:hover {
-                transform: scale(1.1);
-            }
+ .one h2 {
+     color: white;
+     position: relative;
+     top: 2%;
+ }
 
-            .two h1 {
-                margin-top: 20%;
-                width: 100%;
-                text-align: center;
-                font-size: 2.5em;
-                text-transform: uppercase;
-            }
+ .two {
+     width: 33%;
+     margin: 0;
+     height: 100%;
+     background: url(../imagens/fundos/contatogreen.jpg) mediumseagreen;
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+     color: white;
+     font-size: 1.3em;
+     margin: 0.3%;
+     transition: 1s;
+ }
 
-            .tree {
-                width: 33%;
-                margin: 0;
-                height: 100%;
-                background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
-                text-align: center;
-                margin: 0.3%;
-                transition: 1s;
-            }
+ .two h1 {
+     color: rgb(206, 206, 206);
+ }
 
-            .one input[type="radio"] {
-                position: relative;
-                top: 5px;
-                left: 30%;
-                display: inline-block;
-                z-index: 10;
-            }
+ .two:hover {
+     transform: scale(1.1);
+ }
 
-            .tree input[type="radio"] {
-                position: relative;
-                top: 0px;
-                left: 30%;
-                display: inline-block;
-                z-index: 10;
-            }
+ .one:hover {
+     transform: scale(1.1);
+ }
 
-            .tree .imgtree {
-                width: 200px;
-                height: 200px;
-                border-radius: 100%;
-                background: white;
-                position: relative;
-                margin-top: 20%;
-            }
+ .tree:hover {
+     transform: scale(1.1);
+ }
 
-            .tree h2 {
-                color: white;
-                position: relative;
-                top: 2%;
-            }
-            /*configurando a section home da pagina*/
+ .two h1 {
+     margin-top: 20%;
+     width: 100%;
+     text-align: center;
+     font-size: 2.5em;
+     text-transform: uppercase;
+ }
 
-            .textos {
-                margin-top: 25vh;
-                margin-left: 12vw;
-                width: 80vw;
-            }
+ .tree {
+     width: 33%;
+     margin: 0;
+     height: 100%;
+     background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
+     text-align: center;
+     margin: 0.3%;
+     transition: 1s;
+ }
 
-            .textos h1 {
-                width: 100%;
-                text-align: center;
-                font-size: 8em;
-                color: rgba(0, 0, 0, 0.973);
-                margin-bottom: 10px;
-            }
+ .one input[type="radio"] {
+     position: relative;
+     top: 5px;
+     left: 30%;
+     display: inline-block;
+     z-index: 10;
+ }
 
-            .textos p {
-                color: gray;
-                font-size: 1.5em;
-                width: 100%;
-                text-align: center;
-            }
+ .tree input[type="radio"] {
+     position: relative;
+     top: 0px;
+     left: 30%;
+     display: inline-block;
+     z-index: 10;
+ }
 
-            .textos .linha {
-                width: 100%;
-                background: mediumseagreen;
-                border-radius: 30px;
-                height: 3vh;
-            }
+ .tree .imgtree {
+     width: 200px;
+     height: 200px;
+     border-radius: 100%;
+     background: white;
+     position: relative;
+     margin-top: 20%;
+ }
 
-            .more {
-                width: 200px;
-                height: 50px;
-                border-radius: 30px;
-                text-align: center;
-                border: solid 3px gray;
-                color: gray;
-                font-size: 1.5em;
-                background: transparent;
-                margin-left: 30vw;
-                transition: 1s;
-            }
+ .tree h2 {
+     color: white;
+     position: relative;
+     top: 2%;
+ }
 
-            .more:hover {
-                background: mediumseagreen;
-                border: solid 3px mediumseagreen;
-                color: white;
-            }
-            /*configurando a section video da pagina*/
+ /*configurando a section home da pagina*/
 
-            .texto_videozin {
-                width: 100%;
-                text-align: center;
-            }
+ .textos {
+     margin-top: 25vh;
+     margin-left: 12vw;
+     width: 80vw;
+ }
 
-            .texto_videozin h1 {
-                font-size: 70px;
-                line-height: 70px;
-                margin-top: 10px;
-                color: rgba(0, 0, 0, 0.938);
-                margin-bottom: 20px;
-                text-transform: uppercase;
-                font-family: serif;
-            }
+ .textos h1 {
+     width: 100%;
+     text-align: center;
+     font-size: 10vw;
+     color: rgba(0, 0, 0, 0.973);
+     margin-bottom: 10px;
+ }
 
-            .texto_videozin span {
-                color: mediumseagreen;
-                font-size: 2em;
-            }
+ .textos p {
+     color: white;
+     font-size: 1.5em;
+     width: 100%;
+     text-align: center;
+ }
 
-            .texto_videozin .linha {
-                width: 60%;
-                background: mediumseagreen;
-                border-radius: 30px;
-                height: 3vh;
-                margin-left: 20%;
-            }
+ .textos .linha {
+     width: 100%;
+     background: mediumseagreen;
+     border-radius: 30px;
+     height: 3vh;
+ }
 
-            .videozin {
-                margin-left: 11vw;
-                width: 80vw;
-                height: 65vh;
-                margin-top: 2vh;
-                border-radius: 10px;
-            }
-            /*configurando a section about da pagina*/
+ .more {
+     width: 200px;
+     height: 50px;
+     border-radius: 30px;
+     text-align: center;
+     border: solid 3px white;
+     color: white;
+     font-size: 1.5em;
+     background: transparent;
+     margin-left: 30vw;
+     transition: 0.5s;
+ }
 
-            .box_home {
-                width: 86vw;
-                margin-left: 10vw;
-                height: 80vh;
-                margin-top: 20vh;
-                display: flex;
-            }
+ .more:hover {
+     background: mediumseagreen;
+     border: solid 3px mediumseagreen;
+ }
 
-            .box_home .box_home_item {
-                width: 26vw;
-                height: 60vh;
-                margin-top: 10vh;
-                background: white;
-                margin-left: 24px;
-            }
+ /*configurando a section video da pagina*/
 
-            /* configurando o cadastro */
+ .texto_videozin {
+     width: 100%;
+     text-align: center;
+ }
 
-           .Pcadastro{
-               margin: auto;
-               width: 85%;
-           }
+ .texto_videozin h1 {
+     font-size: 70px;
+     line-height: 70px;
+     margin-top: 10px;
+     color: rgba(0, 0, 0, 0.938);
+     margin-bottom: 20px;
+     text-transform: uppercase;
+     font-family: serif;
+ }
 
-           form{
-            margin: 40px 76px;
-            float: left;
-            width: 40%;
-        }
+ .texto_videozin span {
+     color: mediumseagreen;
+     font-size: 2em;
+ }
 
-           form label{
-               display: block;
-               font-size: 20px;
-               margin-top: 10px;
-           }
+ .texto_videozin .linha {
+     width: 60%;
+     background: mediumseagreen;
+     border-radius: 30px;
+     height: 3vh;
+     margin-left: 20%;
+ }
 
-           .input_padronizado{
-               display: block;
-               padding: 10px 25px;
-               width: 100%;
-           }
+ .videozin {
+     margin-left: 11vw;
+     width: 80vw;
+     height: 65vh;
+     margin-top: 2vh;
+     border-radius: 10px;
+ }
 
-          #btn_form{
-            background-color: black;
-            height: 66px;
-            width: 112px;
-            text-decoration: none;
-            color: whitesmoke;
-            border: 2px white solid;
-            border-radius: 11px;
-        }
+ /*configurando a section about da pagina*/
+
+ .box_home {
+     width: 86vw;
+     margin-left: 10vw;
+     height: 80vh;
+     margin-top: 20vh;
+     display: flex;
+ }
+
+ .box_home .box_home_item {
+     width: 26vw;
+     height: 60vh;
+     margin-top: 10vh;
+     background: white;
+     margin-left: 24px;
+ }
+
+ /* configurando o cadastro */
+
+ .Pcadastro {
+     margin-left: 12%;
+     margin-bottom: 10%;
+     width: 40%;
+     border-right: 4px #322f46 solid;
+     float: left;
+
+ }
+
+ form {
+     width: 80%;
+ }
+
+ form label {
+     display: block;
+     font-size: 20px;
+     margin-top: 10px;
+ }
+
+ .input_padronizado {
+     display: block;
+     padding: 10px 25px;
+     width: 100%;
+     border-radius: 10px;
+     
+ }
+
+ #btn_form {
+     background-color: black;
+     height: 66px;
+     width: 112px;
+     text-decoration: none;
+     color: whitesmoke;
+     border: 2px white solid;
+     border-radius: 11px;
+ }
+ .contact .titulo {
+    margin-left: 15%;
+    font-size: 40px;
+ }
+ .logo1 {
+     background-color: rgba(255,255,255,0.6);
+     border-radius: 100%;
+     width: 200px;
+     float: right;
+ }
