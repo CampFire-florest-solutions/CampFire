@@ -7,26 +7,46 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="imagens/icons/logo.png" type="image/x-icon">
     <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/2ef5c473af.js" crossorigin="anonymous"></script>
     <title>Campfire</title>
 </head>
 
 <body>
 
     <div class="menu">
-
-        <a href="#home">
-            <<img src="imagens/icons/home.png" alt="Inicio">
-        </a>
-        <a href="#about"> <img src="imagens/icons/about.png" alt="Sobre"></a>
-        <a href="#team"> <img src="imagens/icons/equipe.png" alt="Equipe"></a>
-        <a href="#video"><img src="imagens/icons/video.png" alt="Video"></a>
-        <a href="#contact"> <img src="imagens/icons/contato.png" alt="Contato"></a>
-
+        
+        <div class="centro">
+            <img src="imagens/logo.png">
+            <a href="#home">
+                <div class="icone scrollspy" id="um">
+                    <i class="fas fa-home"></i>
+                </div>
+            </a>
+            <a href="#about">
+                <div class="icone scrollspy" id="dois">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </a>
+            <a href="#team">
+                <div class="icone scrollspy" id="tres">
+                    <i class="fas fa-users"></i>
+                </div>
+            </a>
+            <a href="#video">
+                <div class="icone scrollspy" id="quatro">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </a>
+            <a href="#contact">
+                <div class="icone scrollspy" id="cinco">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+            </a>
+        </div>
     </div>
-    <section class="home" id="home">
+    <section  class="home" id="home">
         <div class="textos">
             <h1>CAMPFIRE</h1>
-            <div class="linha"></div>
             <p>Sistema de Prevençao de incendios</p>
             <button class="more" onclick="acesso()">Acessar</button>
 
@@ -55,8 +75,7 @@
             </div>
             <div class="two">
                 <h1>hello</h1>
-                <p>Aqui voce pode observar nossos colaboradores e ideializadores deste projeto, que tanto se esforçam
-                    para sempre tazer o melhor para nossos clientes.
+                <p>Equipe Campfire
                 </p>
 
             </div>
@@ -82,18 +101,25 @@
 
     </section>
     <section class="contact" id="contact">
-
+        <h1 class="titulo">Contate-nos</h1>
         <div class="Pcadastro">
             <form>
-                <label for="nomeSobrenome">Nome e sobrenome:</label>
-                <input type="text" id="nomeSobrenome" placeholder="Nome completo" 
-                class="input_padronizado" required>
+                <label for="nomeSobrenome">Nome:</label>
+                <input type="text" id="nomeSobrenome" placeholder="Nome completo" class="input_padronizado" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" class="input_padronizado" required placeholder="marigildo@dominio.com.br">
+                <input type="email" id="email" class="input_padronizado" required placeholder="nome@email.com">
 
-                <label for="telefoneContato">Telefone para contato:</label>
-                <input type="tel" id="telefoneContato" class="input_padronizado" required placeholder="Ex: (00) 00000-0000">
+                <label for="telefoneContato">Telefone:</label>
+                <input type="tel" id="telefoneContato" class="input_padronizado" required
+                    placeholder="Ex: (00) 00000-0000">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" maxlength="70" class="input_padronizado">
+                <label for="mensagem">Mensagem:</label>
+                <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="input_padronizado" maxlength="500"
+                    data-ls-module="charCounter">
+</textarea><br><b id="restantes">500</b> caracteres restantes
+
 
                 <div>
                     <p>Como prefere o contato?</p>
@@ -107,8 +133,14 @@
                     </label>
                 </div>
 
-                <button onclick="enviar_form" id="btn_form">Enviar</button>
+                <button onclick="enviar_form()" id="btn_form">Enviar</button>
             </form>
+        </div>
+        <div>
+            <div class="logo1">
+                <img src="imagens/logo.png" alt="">
+                
+            </div>
         </div>
     </section>
 </body>
