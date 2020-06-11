@@ -8,9 +8,6 @@ CNPJ_CPF varchar(20),
 Hectares int,
 Quantidade_de_Areas int);
 
-INSERT INTO Cliente VALUE
-('rogerio', 'arnetti');
-
 
 create table Usuario (
 ID_Usuario int primary key identity(12010,1),
