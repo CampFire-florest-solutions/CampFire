@@ -1,7 +1,7 @@
 const configuracoes = {
     banco: {
         server: "servercampfiresolutions.database.windows.net",
-        user: "adminbandtec",
+        user: "adiminlocal",
         password: "#Gfcampfire",
         database: "BdCampFire",
         options: {

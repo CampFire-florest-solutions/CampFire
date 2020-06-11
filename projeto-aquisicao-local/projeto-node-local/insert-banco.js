@@ -89,11 +89,11 @@ function registrar_leitura(temperatura, umidade) {
     banco.conectar().then(() => {
 
         return banco.sql.query(`
-        INSERT into dbo.Eventos (Temperatura, Umidade, Momento)
+        INSERT into Eventos (Temperatura, Umidade, Momento)
         values (${temperatura}, ${umidade}, CONVERT(Datetime, '${agora()}', 120));
         
-        delete from leitura where id not in 
-        (select top ${registros_mantidos_tabela_leitura} id from leitura order by id desc);`)
+        delete from Eventos where ID_Evento not in 
+        (select top ${registros_mantidos_tabela_leitura} ID_Evento from Eventos order by ID_Evento desc);`)
         .then(() => {
             console.log('Registro inserido com sucesso!');
         });
