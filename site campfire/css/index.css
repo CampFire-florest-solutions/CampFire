@@ -14,7 +14,10 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap');
  /*configurando a  pagina */
-
+html {
+    scroll-behavior: smooth;
+    transition: 1s;
+}
 
  /*configurando  o corpo da pagina */
 
