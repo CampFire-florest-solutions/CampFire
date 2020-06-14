@@ -397,3 +397,11 @@ html {
      width: 200px;
      float: right;
  }
+
+ #div_erro{
+     background-color: red;
+     color: whitesmoke;
+ }
+ li{
+     text-decoration: none;
+ }

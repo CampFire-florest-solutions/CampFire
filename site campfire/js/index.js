@@ -141,3 +141,35 @@ function scrollBanner() {
 }
 
 window.addEventListener('scroll', scrollBanner);
+
+function enviar_form(){
+    let erros = valida_form();
+    div_erro.innerHTML = '';
+    if (erros.length > 0) {
+        for (let a = 0; a < erros.length; a++) {
+            var erro = erros[a];
+            var li = document.createElement("li");
+            li.innerHTML = erro;
+
+            div_erro.appendChild(li);
+        }
+    }
+    else{
+        // envia para o banco
+    }
+}
+
+function valida_form(){
+    let erros = [];
+
+    if (!nomeSobrenome.value) {
+        erros.push("Preencha o nome");
+    }
+
+    if ((email.value.search("@") == -1) ||
+       (email.value.search(".") == -1) ||
+       (email.value.search(" ") >= 1)) {
+          erros.push("O formato de email é: blablabla@dominio.com")   
+    }
+    return erros;
+}
