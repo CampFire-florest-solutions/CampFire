@@ -1,6 +1,6 @@
 const configuracoes = {
     banco: {
-        server: "servercampfiresolutions.database.windows.net",
+        server: "servercampfiresolutions.database.windows.net", /* link direto para a nuvem*/
         user: "adiminlocal",
         password: "#Gfcampfire",
         database: "BdCampFire",

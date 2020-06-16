@@ -9,14 +9,14 @@ router.get('/ultimas', function(req, res, next) {
 	// quantas são as últimas leituras que quer? 8 está bom?
 	const limite_linhas = 7;
 
-	console.log(`Recuperando as últimas ${limite_linhas} leituras`);
+	console.log(`Recuperando as últimas ${limite_linhas} Eventos`);
 	
 	const instrucaoSql = `select top ${limite_linhas} 
-						temperatura, 
-						umidade, 
-						momento,
-						FORMAT(momento,'HH:mm:ss') as momento_grafico 
-						from leitura order by id desc`;
+						Temperatura, 
+						Umidade, 
+						Momento,
+						FORMAT(Momento,'HH:mm:ss') as momento_grafico 
+						from Eventos order by ID_Evento desc`;
 
 	sequelize.query(instrucaoSql, {
 		model: Leitura,
@@ -37,8 +37,8 @@ router.get('/tempo-real', function (req, res, next) {
 	
 	console.log(`Recuperando a última leitura`);
 
-	const instrucaoSql = `select top 1 temperatura, umidade, FORMAT(momento,'HH:mm:ss') as momento_grafico  
-						from leitura order by id desc`;
+	const instrucaoSql = `select top 1 Temperatura, Umidade, FORMAT(Momento,'HH:mm:ss') as momento_grafico  
+						from Eventos order by ID_Evento desc`;
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
 		.then(resultado => {

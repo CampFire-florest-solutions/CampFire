@@ -74,8 +74,8 @@
                     dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
                     dados.datasets[0].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
-                    dados.datasets[1].data.push(novoRegistro.umidade); // incluir uma nova leitura de umidade
+                    dados.datasets[0].data.push(novoRegistro.Temperatura); // incluir uma nova leitura de temperatura
+                    dados.datasets[1].data.push(novoRegistro.Umidade); // incluir uma nova leitura de umidade
                     window.grafico_linha.update();
                     
                     setTimeout(atualizarGrafico, 5000);
@@ -147,8 +147,8 @@
 
                         dados.labels.push(registro.momento_grafico);
 
-                        dados.datasets[0].data.push(registro.temperatura);
-                        dados.datasets[1].data.push(registro.umidade);
+                        dados.datasets[0].data.push(registro.Temperatura);
+                        dados.datasets[1].data.push(registro.Umidade);
                     }
                     console.log(JSON.stringify(dados));
 
