@@ -127,12 +127,13 @@
  }
 
  .contact {
-     width: 100%;
-     float: right;
-     height: 100%;
-     background: mediumseagreen;
-     transition: 1s;
- }
+    width: 100%;
+    float: right;
+    height: 100%;
+    background: #232323;
+    color: white;
+    transition: 1s;
+}
 
  /*configurando a section team da pagina*/
 
@@ -385,6 +386,9 @@
      font-size: 20px;
      margin-top: 10px;
  }
+ form p{
+    font-size: 21px;
+ }
 
  .input_padronizado {
      display: block;
@@ -394,7 +398,7 @@
  }
 
  #btn_form {
-     background-color: black;
+     background-color: #04724D;
      height: 66px;
      width: 112px;
      text-decoration: none;
@@ -404,18 +408,18 @@
  }
 
  .contact .titulo {
-     margin-left: 15%;
+     margin-left: 20%;
      font-size: 40px;
  }
 
  .logo1 {
-     background-color: rgba(255, 255, 255, 0.6);
-     border-radius: 100%;
-     width: 200px;
-     float: right;
- }
+    background-color: rgba(255,255,255,0.6);
+    margin-right: 200px;
+    border-radius: 100%;
+    width: 200px;
+    float: right;
+}
 
-<<<<<<< HEAD
  #div_erro{
      color: whitesmoke;
  }
@@ -429,13 +433,6 @@
     margin-right: 78px;
     border-radius: 5px;
 }
-=======
  #div_erro {
-     background-color: red;
      color: whitesmoke;
  }
-
- li {
-     text-decoration: none;
- }
->>>>>>> refs/remotes/origin/master

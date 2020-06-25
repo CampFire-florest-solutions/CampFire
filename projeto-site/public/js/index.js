@@ -175,7 +175,7 @@ function valida_form(){
     if ((email.value.search("@") == -1) ||
        (email.value.search(".") == -1) ||
        (email.value.search(" ") >= 1)) {
-          erros.push("O formato de email é: blablabla@dominio.com")   
+          erros.push("formato de email invalido")   
     }
     if (!mensagem.value) {
         erros.push("Preencha o campo de mensagem");
