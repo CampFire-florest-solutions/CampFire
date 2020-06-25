@@ -165,11 +165,20 @@ function valida_form(){
     if (!nomeSobrenome.value) {
         erros.push("Preencha o nome");
     }
+    if (!telefoneContato.value) {
+        erros.push("Preencha o telefone");
+    }
+    if (!assunto.value) {
+        erros.push("Preencha o assunto");
+    }
 
     if ((email.value.search("@") == -1) ||
        (email.value.search(".") == -1) ||
        (email.value.search(" ") >= 1)) {
           erros.push("O formato de email é: blablabla@dominio.com")   
+    }
+    if (!mensagem.value) {
+        erros.push("Preencha o campo de mensagem");
     }
     return erros;
 }

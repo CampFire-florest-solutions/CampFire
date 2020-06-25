@@ -1,133 +1,179 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 380px;
-    background-color: #02001A;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.div_form{
-    background-color: whitesmoke;
-    border: solid 1px black;
-    box-shadow: 15px 15px 15px black;
-    width: 355px;
-    max-width: 400px;
-    height: 58vh;
-    margin-left: 110vh;
-    margin-top: 30vh;
-    border-radius: 11px;
+    background: #1d182b;
 }
 
-.div_form span{
-    margin-left: 4vh;
+.content {
+    width: 80%;
+    height: 80vh;
+    border: black solid 0px;
+    box-shadow: 0 10px 40px black;
+    margin-left: 10%;
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.div_form h3{
-    text-align: center;
-}
-.div_form input[type=email], .div_form input[type=text] {
-    width: 78%;
-    padding: 14px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-    margin-left: 20px;
-    margin-top: 23px;
-}
-
-.div_form input[type=email]:focus, .div_form input[type=text]:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-.div_form button{
-  color: white;
-  width: 100%;
-  margin-bottom:10px;
-}
-
-.div_form .sing_in{
-    background-color: #4CAF50;
-    padding: 17px 20px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    bottom: 59px;
-    right: -175px;
-    height: 49px;
-    top: -58px;
-    width: 51%;
-    border-bottom-right-radius: 9px;
-}
-.div_form .sing_in:hover{
-    opacity: 1;
-}
-
-.div_form .back{
-    background-color: #c51616;
-    color: white;
-    padding: 16px 0px;
-    border: none;
-    cursor: pointer;
-    position: initial;
-    bottom: 79px;
-    right: 140px;
+.log {
     width: 50%;
-    border-bottom-left-radius: 12px;
-}
-.div_form .back:hover{
-    opacity: 1;
-}
-.btn_teste{
-    -webkit-appearance: none;
+    float: right;
+    height: 80vh;
+    transition: 1.5s;
 }
 
-.btn_teste button[onclick=subir()]{
-    
-    background-color: #c51616;
-    color: white;
-    padding: 16px 0px;
-    border: none;
+.home_box {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    float: right;
+    display: flex;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+.home_icon {
+    width: 40px;
+    background: transparent;
+    float: right;
+    height: 40px;
+    background-image: url(home.png);
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
-    position: initial;
-    border-radius: 12px;
 }
-/* usando # pois o getElement nao pega class */
-#barra_erro{
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -52px;
-    background-color: #333;
-    color: antiquewhite;
+
+.login {
+    margin-top: 20%;
+    width: 100%;
+    display: block;
+    height: 75%;
+}
+
+input {
+    width: 70%;
+    background: transparent;
+    border: none;
+    border-bottom: 5px mediumseagreen solid;
+    outline: none;
+    font-size: 1.6em;
+    color: mediumseagreen;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+input:focus {
+    border-bottom: 5px mediumseagreen solid;
+}
+
+.login .primeiroinput {
+    margin-top: 20%;
+}
+
+input[type="button"] {
+    border: none;
+    width: 40%;
+    height: 5vh;
+    background: mediumseagreen;
+    color: #1d182b;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.cad {
+    width: 50%;
+    float: left;
+    height: 80vh;
+}
+
+.box_cad {
+    width: 100%;
+    height: 80%;
+    margin-top: 20%;
+}
+
+.home_box_cad {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    float: left;
+    display: flex;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.home_icon_cad {
+    width: 40px;
+    background: transparent;
+    float: left;
+    height: 40px;
+    background-image: url(home.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.intro {
+    width: 40vw;
+    float: left;
+    height: 80vh;
+    background: mediumseagreen;
+    transition: 1s;
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    z-index: 100;
+}
+
+.intro h1 {
+    width: 100%;
     text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 30px;
-    font-size: 17px;
+    color: white;
+    margin-top: 150px;
+    font-size: 3em;
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
-#barra_erro.mostrar{
-    visibility: visible;
-    -webkit-animation: aparecer 0.5s, sumir 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+.intro p {
+    width: 93%;
+    text-align: center;
+    color: #565656;
+    padding: 0 0 0 10px;
+    font-size: 1.4em;
 }
-/* pegando animações da net  */
-@-webkit-keyframes fadein{
-    from{top: 0; opacity: 0;}
-    to {top: 30px; opacity: 1;}
+
+.intro button {
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    width: 200px;
+    height: 6vh;
+    margin-left: 28%;
+    font-size: 1.6em;
+    cursor: pointer;
 }
-@keyframes fadein {
-    from {top: 0; opacity: 0;}
-    to {top: 30px; opacity: 1;}
-  }
-  
-  @-webkit-keyframes fadeout {
-    from {top: 30px; opacity: 1;} 
-    to {top: 0; opacity: 0;}
-  }
-  
-  @keyframes fadeout {
-    from {top: 30px; opacity: 1;}
-    to {top: 0; opacity: 0;}
-  }
+
+.erro {
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    left: 25%;
+    height: 5vh;
+    border: 1px red solid;
+    border-radius: 3px;
+    top: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    transition: 2s;
+    display: none;
+    color: white;
+    background: #ff000029;
+}

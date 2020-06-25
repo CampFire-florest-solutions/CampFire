@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/login.js"></script>
-    <link rel="shortcut icon" href="../imagens/icons/logo.png" type="image/x-icon">
-    <title>CampFire-login</title>
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
 
+    <title>CampFire - Acesso</title>
 </head>
-<body>
-    <div class="div_form">
-        <br>
-     <h3>Login</h3>
-     <br>
-     <span>Email:</span> <br>
-     <input type="email" placeholder="Email" id="user_email" required> <br>
-     <span>Senha:</span> <br>
-     <input type="text" placeholder="Senha" id="user_senha" required>
-     <br> <br>
-     <button class="back" onclick="btn_voltar()">Sair</button>
-     <button class="sing_in" onclick="btn_entrar()">Entrar</button>
-    </div>
 
-    <div id="barra_erro">Login incorreto</div>
+<body>
+    <div class="erro" id="erro"> Login Invalido</div>
+    <div class="content">
+        <div class="intro" id="panel">
+            <h1>Cadastro</h1>
+            <p>Faça agora mesmo o seu cadastro para ter acesso as informações da area monitorada. E se você ainda não
+                faz parte do nosso grupo de clintes envie sua solicitação para o nosso E-mail</p>
+            <button onclick="cad()"> Cadastrar</button>
+        </div>
+        <div class="cad">
+            <div class="home_box_cad">
+                <a href="" class="home_icon_cad"> </a>
+            </div>
+            <form class="box_cad" action="#">
+                <input type="text" placeholder="Nome usuario" id="cadUser" required>
+                <input type="password" placeholder="Nova Senha" id="cadSenha" required>
+                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="CPF ou CNPJ">
+                <input type="text" placeholder="Código de Validação">
+                <input type="button" value="Cadastrar">
+            </form>
+
+        </div>
+        <div class="log">
+            <div class="home_box">
+                <a href="" class="home_icon"> </a>
+            </div>
+            <form class="login" method="post" onsubmit="return verificar()" id="form_login">
+                <input type="text" class="primeiroinput" id="login" placeholder="Username" >
+                <input type="password" id="senha" placeholder="Senha" >
+                <input type="button" value="Acessar" onclick="verificar()">
+
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
+<script>
+
+    function verificar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.Login;
+                    sessionStorage.nome_usuario_meuapp = json.Senha;
+                    
+                    window.location.href = 'grafico-chartjs.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+</script>
