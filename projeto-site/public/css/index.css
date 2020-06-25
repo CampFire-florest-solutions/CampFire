@@ -1,23 +1,26 @@
  /*importando fontes para a pagina */
 
  ::-webkit-scrollbar-track {
-    background-color: #322f46;
-}
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(0, 239, 242);
-    background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
-    border-radius: 10px;
-}
+     background-color: #322f46;
+ }
+
+ ::-webkit-scrollbar {
+     width: 12px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: rgb(0, 239, 242);
+     background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
+     border-radius: 10px;
+ }
 
  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap');
  /*configurando a  pagina */
-html {
-    scroll-behavior: smooth;
-    transition: 1s;
-}
+
+ html {
+     scroll-behavior: smooth;
+     transition: 1s;
+ }
 
  /*configurando  o corpo da pagina */
 
@@ -38,6 +41,7 @@ html {
      background: #322f46;
      border-right: 2px solid rgb(0, 239, 242);
  }
+
  .ativado {
      background: linear-gradient(0deg, rgba(0, 239, 242, 0.5) 0%, rgba(0, 255, 158, 0.5) 100%);
      color: white;
@@ -79,11 +83,12 @@ html {
  }
 
  .centro img {
-    width: 100%;
-    height: auto;
-    padding-bottom: 2vw;
-    border-bottom: 0.25vw solid rgba(0, 239, 242, 1);
+     width: 100%;
+     height: auto;
+     padding-bottom: 2vw;
+     border-bottom: 0.25vw solid rgba(0, 239, 242, 1);
  }
+
  /*configurando as sections da pagina*/
 
  .home {
@@ -99,10 +104,10 @@ html {
  .about {
      width: 100%;
      float: right;
-     height: 100vh;
+     height: 70vh;
      transition: 1s;
-     background: rgb(255,255,255);
-     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(127,130,130,1) 40%, rgba(69,80,80,1) 64%, rgba(37,51,52,1) 100%);
+     background: rgb(255, 255, 255);
+     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(127, 130, 130, 1) 40%, rgba(69, 80, 80, 1) 64%, rgba(37, 51, 52, 1) 100%);
  }
 
  .team {
@@ -110,7 +115,7 @@ html {
      float: right;
      height: 100vh;
      transition: 1s;
-    background: white;
+     background: white;
  }
 
  .video {
@@ -324,8 +329,8 @@ html {
  }
 
  .videozin {
-     margin-left: 11vw;
-     width: 80vw;
+     margin-left: 22.5vw;
+     width: 55vw;
      height: 65vh;
      margin-top: 2vh;
      border-radius: 10px;
@@ -337,17 +342,29 @@ html {
      width: 86vw;
      margin-left: 10vw;
      height: 80vh;
-     margin-top: 20vh;
-     display: flex;
+     margin-top: 5vh;
+     display: inline-flex;
  }
 
  .box_home .box_home_item {
      width: 26vw;
      height: 60vh;
-     margin-top: 10vh;
-     background: white;
+     background: transparent;
      margin-left: 24px;
  }
+
+ .box_home_item img {
+    width: 50%;
+    margin: 0 25%;
+ }
+.box_home_item p {
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+    text-shadow: 0.2em 0.2em 0.3em #232323;
+    font-family: "Poppins";
+}
+
 
  /* configurando o cadastro */
 
@@ -357,7 +374,6 @@ html {
      width: 40%;
      border-right: 4px #322f46 solid;
      float: left;
-
  }
 
  form {
@@ -375,7 +391,6 @@ html {
      padding: 10px 25px;
      width: 100%;
      border-radius: 10px;
-     
  }
 
  #btn_form {
@@ -387,17 +402,20 @@ html {
      border: 2px white solid;
      border-radius: 11px;
  }
+
  .contact .titulo {
-    margin-left: 15%;
-    font-size: 40px;
+     margin-left: 15%;
+     font-size: 40px;
  }
+
  .logo1 {
-     background-color: rgba(255,255,255,0.6);
+     background-color: rgba(255, 255, 255, 0.6);
      border-radius: 100%;
      width: 200px;
      float: right;
  }
 
+<<<<<<< HEAD
  #div_erro{
      color: whitesmoke;
  }
@@ -411,3 +429,13 @@ html {
     margin-right: 78px;
     border-radius: 5px;
 }
+=======
+ #div_erro {
+     background-color: red;
+     color: whitesmoke;
+ }
+
+ li {
+     text-decoration: none;
+ }
+>>>>>>> refs/remotes/origin/master
