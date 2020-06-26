@@ -115,7 +115,7 @@
      float: right;
      height: 100vh;
      transition: 1s;
-     background: white;
+     background: #89BD9E;
  }
 
  .video {
@@ -148,9 +148,11 @@
 
  .one {
      width: 33%;
+     background: rgb(50,47,70);
+     background: linear-gradient(0deg, rgba(50,47,70,1) 13%, rgba(3,15,46,1) 100%);
+     border-radius: 9px;
      margin: 0;
      height: 100%;
-     background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
      text-align: center;
      color: white;
      margin: 0.3%;
@@ -176,7 +178,8 @@
      width: 33%;
      margin: 0;
      height: 100%;
-     background: url(../imagens/fundos/contatogreen.jpg) mediumseagreen;
+     background: url(../imagens/fundos/contatogreen.jpg) #322f46;
+     border-radius: 9px;
      background-size: cover;
      background-position: center;
      text-align: center;
@@ -214,7 +217,9 @@
      width: 33%;
      margin: 0;
      height: 100%;
-     background: linear-gradient(rgba(128, 128, 128, 0.247), mediumseagreen);
+     background: rgb(50,47,70);
+     background: linear-gradient(0deg, rgba(50,47,70,1) 13%, rgba(3,15,46,1) 100%);
+     border-radius: 9px;
      text-align: center;
      margin: 0.3%;
      transition: 1s;
@@ -230,7 +235,7 @@
 
  .tree input[type="radio"] {
      position: relative;
-     top: 0px;
+     top: 5px;
      left: 30%;
      display: inline-block;
      z-index: 10;
@@ -373,7 +378,7 @@
      margin-left: 12%;
      margin-bottom: 10%;
      width: 40%;
-     border-right: 4px #322f46 solid;
+     border-right: 4px #01bf6a solid;
      float: left;
  }
 
@@ -391,11 +396,22 @@
  }
 
  .input_padronizado {
-     display: block;
-     padding: 10px 25px;
-     width: 100%;
-     border-radius: 10px;
- }
+    display: block;
+    padding: 10px 25px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: white 1px solid;
+    color: white;
+    outline: none;
+}
+
+.text_area{
+    width: 110%;
+    background-color: transparent;
+    color: white;
+    resize: none;
+}
 
  #btn_form {
      background-color: #04724D;
@@ -413,11 +429,13 @@
  }
 
  .logo1 {
-    background-color: rgba(255,255,255,0.6);
-    margin-right: 200px;
-    border-radius: 100%;
+    margin-right: 164px;
     width: 200px;
     float: right;
+}
+
+.logo1 img{
+    height: 16vh;
 }
 
  #div_erro{
@@ -436,3 +454,16 @@
  #div_erro {
      color: whitesmoke;
  }
+
+ .lista_contato li{
+    background-color: black;
+    width: 38vh;
+    border-radius: 25px;
+    position: absolute;
+    right: 100px;
+}
+
+ .lista_contato li img{
+    height: 14vh;
+    border-radius: 29px;
+}
