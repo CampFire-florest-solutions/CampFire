@@ -165,9 +165,6 @@ function valida_form(){
     if (!nomeSobrenome.value) {
         erros.push("Preencha o nome");
     }
-    if (!telefoneContato.value) {
-        erros.push("Preencha o telefone");
-    }
     if (!assunto.value) {
         erros.push("Preencha o assunto");
     }
@@ -175,7 +172,7 @@ function valida_form(){
     if ((email.value.search("@") == -1) ||
        (email.value.search(".") == -1) ||
        (email.value.search(" ") >= 1)) {
-          erros.push("formato de email invalido")   
+          erros.push("Formato de E-mail inválido")   
     }
     if (!mensagem.value) {
         erros.push("Preencha o campo de mensagem");

@@ -63,8 +63,8 @@
                 <p>Seja alertado se sua área corre risco de incêndio</p>
             </div>
             <div class="box_home_item" class="tres"></div>
-
         </div>
+        <button>Saiba Mais</button>
     </section>
     <section class="team" id="team">
 
@@ -97,7 +97,6 @@
     </section>
     <section class="video" id="video">
         <div class="texto_videozin">
-            <span>Campfire</span>
             <h1> Campfire - Solução</h1>
             <div class="linha"></div>
         </div>
@@ -111,57 +110,36 @@
         <div class="Pcadastro">
             <form>
                 <label for="nomeSobrenome">Nome:</label>
-                <input type="text" id="nomeSobrenome" placeholder="Nome completo" class="input_padronizado" required>
-
+                <input type="text" id="nomeSobrenome" class="input_padronizado" required minlength="3">
                 <label for="email">Email:</label>
-                <input type="email" id="email" class="input_padronizado" required placeholder="nome@email.com">
-
-                <label for="telefoneContato">Telefone:</label>
-                <input type="tel" id="telefoneContato" class="input_padronizado" required
-                    placeholder="Ex: (00) 00000-0000">
+                <input type="email" id="email" class="input_padronizado" required>
                 <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" maxlength="70" class="input_padronizado">
+                <input type="text" id="assunto" maxlength="70" class="input_padronizado" required>
                 <label for="mensagem">Mensagem:</label>
-                <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="text_area"
-                    maxlength="500" data-ls-module="charCounter">
-                </textarea><br><b id="restantes">500</b> caracteres restantes
+                <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="text_area" required maxlength="500">
+                </textarea>
+                <br><p><b id="restantes">
+                   500</b> caracteres restantes</p>
 
-
-                <div>
-                    <p>Como prefere o contato?</p>
-
-                    <label for="email-radio">
-                        <input type="radio" id="email-radio" name="contato" checked>Email
-                    </label>
-
-                    <label for="telefone-radio">
-                        <input type="radio" id="telefone-radio" name="contato">Telefone
-                    </label>
-                </div>
-
-                <button onclick="enviar_form()" id="btn_form">Enviar</button>
+                <button onclick="enviar_form()" id="btn_form">Enviar</button><br>
 
                 <div id="div_erro"></div>
             </form>
         </div>
         <div>
-            <div class="logo1">
+            <div class="sociais">
                 <img src="imagens/logo.png" alt="">
-
-
-                <ul class="lista_contato">
-                    <li> <img src="imagens/integrantes/alexandre.png" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                    <br>
-                    <li> <img src="imagens/integrantes/caue.jpg" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                    <br>
-                    <li> <img src="imagens/integrantes/isabela.png" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                    <br>
-                    <li> <img src="imagens/integrantes/juan.png" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                    <br>
-                    <li> <img src="imagens/integrantes/leonardo.jpg" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                    <br>
-                    <li> <img src="imagens/integrantes/mathias.png" alt=""> <a href="">email</a> <a href="">github</a> <a href="">intagram</a> </li>
-                </ul>
+                <h2>CampFire</h2>
+                <div class="icones_sociais">
+                    <a href="" target="_blank"><i class="fab fa-facebook" title="Facebook"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a>
+                    <a href="mailto:201grupo4a@bandtec.com.br" target="_blank"><i class="fas fa-envelope-square"
+                            title="E-mail"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
+                </div>
+                <br><br>
+                <p>Copyright © 2020 CampFire. <br> Todos os direitos Reservados.
+                </p>
             </div>
         </div>
     </section>
