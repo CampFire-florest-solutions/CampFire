@@ -182,7 +182,7 @@
      width: 33%;
      margin: 0;
      height: 100%;
-     background: url(../imagens/fundos/contatogreen.jpg) #322f46;
+     background: url(../imagens/fundos/nature.png) #322f46;
      border-radius: 9px;
      background-size: cover;
      background-position: center;
@@ -194,8 +194,12 @@
  }
 
  .two h1 {
-     color: rgb(206, 206, 206);
- }
+    margin-top: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
 
  .one:hover {
      transform: scale(1.05);
@@ -343,13 +347,23 @@
      margin-left: 20%;
  }
 
- .videozin {
-     margin-left: 22.5vw;
-     width: 55vw;
-     height: 65vh;
-     margin-top: 2vh;
-     border-radius: 10px;
- }
+.div_texto-video p{
+    text-align: -webkit-center;
+    font-size: 23px;
+    margin-top: 6vw;
+    margin-left: 17vw;
+    width: 23vw;
+    float: left;
+}
+
+.videozin {
+    float: right;
+    width: 47vw;
+    height: 52vh;
+    margin-top: 8vh;
+    margin-right: 4vh;
+    border-radius: 10px;
+}
 
  /*configurando a section about da pagina*/
 
