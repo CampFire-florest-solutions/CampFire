@@ -163,12 +163,13 @@
  }
 
  .one img {
-     width: 200px;
-     height: 200px;
+     width: 14vw;
+     height: auto;
      border-radius: 100%;
      background: white;
      position: relative;
-     margin-top: 20%;
+     margin-top: 5%;
+     border: 2px solid #01bf6a;
  }
 
  .one h2 {
@@ -196,16 +197,12 @@
      color: rgb(206, 206, 206);
  }
 
- .two:hover {
-     transform: scale(1.1);
- }
-
  .one:hover {
-     transform: scale(1.1);
+     transform: scale(1.05);
  }
 
  .tree:hover {
-     transform: scale(1.1);
+     transform: scale(1.05);
  }
 
  .two h1 {
@@ -227,6 +224,14 @@
      margin: 0.3%;
      transition: 1s;
  }
+ .intermedio a {
+     color: white;
+     font-size: 5.5vh;
+     margin-top: 2vh;
+ }
+ .intermedio a:hover {
+     color: rgba(255, 255, 255, 0.6);
+ }
 
  .one input[type="radio"] {
      position: relative;
@@ -245,12 +250,13 @@
  }
 
  .tree .imgtree {
-     width: 200px;
-     height: 200px;
+     width: 14vw;
+     height: auto;
      border-radius: 100%;
      background: white;
      position: relative;
-     margin-top: 20%;
+     margin-top: 5%;
+     border: 2px solid #01bf6a;
  }
 
  .tree h2 {
@@ -374,6 +380,24 @@
     font-family: "Poppins";
 }
 
+.saibamais {
+    background-color: transparent;
+    height: 50px;
+    width: 300px;
+    text-decoration: none;
+    color: white;
+    border: 3px white solid;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-family: "Poppins";
+    font-size: 2.5vh;
+    margin-top: 1.5vh;
+    transition: 0.2s;
+    margin-left: 20%;
+    cursor: pointer;
+}
+
 
  /* configurando o cadastro */
 
@@ -427,14 +451,14 @@
 }
 
  #btn_form {
-     background-color: #01bf6a;
+     background-color: transparent;
      height: 50px;
      width: 100px;
      text-decoration: none;
-     color: black;
-     border: 2px white solid;
+     color: white;
+     border: 3px white solid;
      outline: none;
-     border-radius: 11px;
+     border-radius: 30px;
      font-weight: bolder;
      font-family: "Poppins";
      font-size: 2.5vh;
@@ -443,9 +467,17 @@
      float: left;
  }
 
+#btn_form:hover {
+    background: mediumseagreen;
+    border: solid 3px mediumseagreen;
+}
+
+
  #btn_form:active {
      background-color: white;
      transform: scale(0.95);
+     color: black;
+     border: white 2px solid;
  } 
 
  .contact .titulo {
@@ -488,7 +520,7 @@
 
  #div_erro{
      color: whitesmoke;
-     margin: 5vh 6vw;
+     margin: 6vw;
      display: block;
  }
  li{
@@ -498,4 +530,5 @@
     background-color: #ff000047;
     padding: 7px;
     border-radius: 5px;
+    
 }

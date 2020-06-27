@@ -18,27 +18,27 @@
         <div class="centro">
             <img src="imagens/logo.png">
             <a href="#home">
-                <div class="icone" id="um">
+                <div class="icone" id="um" title="Home">
                     <i class="fas fa-home"></i>
                 </div>
             </a>
             <a href="#about">
-                <div class="icone" id="dois">
+                <div class="icone" id="dois" title="Sobre">
                     <i class="fas fa-info-circle"></i>
                 </div>
             </a>
             <a href="#team">
-                <div class="icone" id="tres">
+                <div class="icone" id="tres" title="Equipe">
                     <i class="fas fa-users"></i>
                 </div>
             </a>
             <a href="#video">
-                <div class="icone" id="quatro">
+                <div class="icone" id="quatro" title="Vídeo">
                     <i class="fab fa-youtube"></i>
                 </div>
             </a>
             <a href="#contact">
-                <div class="icone" id="cinco">
+                <div class="icone" id="cinco" title="Contato">
                     <i class="fas fa-envelope-open-text"></i>
                 </div>
             </a>
@@ -63,8 +63,9 @@
                 <p>Seja alertado se sua área corre risco de incêndio</p>
             </div>
             <div class="box_home_item" class="tres"></div>
+            <button onclick="saibamais()" class="saibamais">Saiba Mais</button>
         </div>
-        <button>Saiba Mais</button>
+        
     </section>
     <section class="team" id="team">
 
@@ -76,8 +77,10 @@
                 <br>
                 <img src="imagens/integrantes/mathias.png" alt="" id="imgone" class="imgone">
                 <h2 id="texto1">Mathias Carvalho</h2>
-
-
+                    <a href="https://www.instagram.com/king_sou_eu/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a>
+                    <a href="mailto:mathias.carvalho@bandtec.com.br" target="_blank"><i class="fas fa-envelope-square"
+                            title="E-mail"></i></a>
+                    <a href="https://github.com/mathias-maker" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
             </div>
             <div class="two">
                 <h1>hello</h1>
@@ -92,6 +95,11 @@
                 <br>
                 <img src="imagens/integrantes/alexandre.png" alt="" id="imagetre" class="imgtree">
                 <h2 id="texto">Alexandre Diogo</h2>
+                <a href="https://www.facebook.com/andy.overtaker" target="_blank"><i class="fab fa-facebook" title="Facebook"></i></a>
+                    <a href="https://www.instagram.com/aleh_nascimento_oficial/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a>
+                    <a href="mailto:alexandre.nascimento@bandtec.com.br" target="_blank"><i class="fas fa-envelope-square"
+                            title="E-mail"></i></a>
+                    <a href="https://github.com/AlehNascimento" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
             </div>
         </div>
     </section>
@@ -116,10 +124,11 @@
                 <label for="assunto">Assunto:</label>
                 <input type="text" id="assunto" maxlength="70" class="input_padronizado" required>
                 <label for="mensagem">Mensagem:</label>
-                <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="text_area" required maxlength="500">
-                </textarea>
-                <br><p><b id="restantes">
-                   500</b> caracteres restantes</p>
+                <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="text_area" required
+                    maxlength="500"></textarea>
+                <br>
+                <p><b id="restantes">
+                        500</b> caracteres restantes</p>
 
                 <button onclick="enviar_form()" id="btn_form">Enviar</button><br>
 
@@ -135,7 +144,7 @@
                     <a href="" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a>
                     <a href="mailto:201grupo4a@bandtec.com.br" target="_blank"><i class="fas fa-envelope-square"
                             title="E-mail"></i></a>
-                    <a href="" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
+                    <a href="https://github.com/CampFire-florest-solutions/CampFire" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
                 </div>
                 <br><br>
                 <p>Copyright © 2020 CampFire. <br> Todos os direitos Reservados.

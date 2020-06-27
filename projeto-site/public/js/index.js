@@ -11,6 +11,7 @@ function trocar2() {
 
 
 
+
     } else if (tree1.checked == true) {
 
 
@@ -83,7 +84,7 @@ function mover() {
 
 
     } else {
-        alert("nao foi possivel visualizar o video");
+        alert("Não foi possivel visualizar o video");
     }
 
 
@@ -98,49 +99,7 @@ function digitar() {
     let restante = 500 - quantidade;
     restantes.innerHTML = restante;
 }
-function scrollBanner() {
-    var scrollPos = window.scrollY;
 
-    if (scrollPos <= 700) {
-        document.getElementById('um').className = 'ativado';
-        document.getElementById('dois').className = 'icone';
-        document.getElementById('tres').className = 'icone';
-        document.getElementById('quatro').className = 'icone';
-        document.getElementById('cinco').className = 'icone';
-        [data-sectio]
-    }
-    else if (scrollPos <= 1400) {
-        document.getElementById('um').className = 'icone';
-        document.getElementById('dois').className = 'ativado';
-        document.getElementById('tres').className = 'icone';
-        document.getElementById('quatro').className = 'icone';
-        document.getElementById('cinco').className = 'icone';
-    }
-    else if (scrollPos <= 2100) {
-        document.getElementById('um').className = 'icone';
-        document.getElementById('dois').className = 'icone';
-        document.getElementById('tres').className = 'ativado';
-        document.getElementById('quatro').className = 'icone';
-        document.getElementById('cinco').className = 'icone';
-    }
-    else if (scrollPos <= 2800) {
-        document.getElementById('um').className = 'icone';
-        document.getElementById('dois').className = 'icone';
-        document.getElementById('tres').className = 'icone';
-        document.getElementById('quatro').className = 'ativado';
-        document.getElementById('cinco').className = 'icone';
-    }
-    else if (scrollpos <= 3500) {
-        document.getElementById('um').className = 'icone';
-        document.getElementById('dois').className = 'icone';
-        document.getElementById('tres').className = 'icone';
-        document.getElementById('quatro').className = 'icone';
-        document.getElementById('cinco').className = 'ativado';
-    }
-    
-}
-
-window.addEventListener('scroll', scrollBanner);
 
 function enviar_form(){
     let erros = valida_form();
@@ -178,4 +137,8 @@ function valida_form(){
         erros.push("Preencha o campo de mensagem");
     }
     return erros;
+}
+
+function saibamais() {
+    location.href = 'pages/sobre.html';
 }
