@@ -17,6 +17,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap');
  /*configurando a  pagina */
 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
  html {
      scroll-behavior: smooth;
      transition: 1s;
@@ -106,8 +108,7 @@
      float: right;
      height: 70vh;
      transition: 1s;
-     background: rgb(255, 255, 255);
-     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(127, 130, 130, 1) 40%, rgba(69, 80, 80, 1) 64%, rgba(37, 51, 52, 1) 100%);
+     background: rgb(37, 51, 52);
  }
 
  .team {
@@ -134,7 +135,7 @@
     background: #232323;
     color: white;
     transition: 1s;
-    font-family: "Poppins";
+    font-family: 'Poppins', sans-serif;
     border-top: #01bf6a 7px solid;
 }
 
@@ -227,7 +228,7 @@
  .intermedio a {
      color: white;
      font-size: 5.5vh;
-     margin-top: 2vh;
+     margin: 2vh 0.5vh;
  }
  .intermedio a:hover {
      color: rgba(255, 255, 255, 0.6);
@@ -306,11 +307,12 @@
      background: transparent;
      margin-left: 30vw;
      transition: 0.5s;
+     font-family: 'Poppins', sans-serif;
  }
 
  .more:hover {
-     background: mediumseagreen;
-     border: solid 3px mediumseagreen;
+     background: #01bf6a;
+     border: solid 3px #01bf6a;
  }
 
  /*configurando a section video da pagina*/
@@ -356,14 +358,14 @@
  .box_home {
      width: 86vw;
      margin-left: 10vw;
-     height: 80vh;
+     height: auto;
      margin-top: 5vh;
      display: inline-flex;
  }
 
  .box_home .box_home_item {
      width: 26vw;
-     height: 60vh;
+     height: auto;
      background: transparent;
      margin-left: 24px;
  }
@@ -377,25 +379,34 @@
     font-size: 2vw;
     color: white;
     text-shadow: 0.2em 0.2em 0.3em #232323;
-    font-family: "Poppins";
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 4vh;
+}
+
+.image3 {
+    width: 20%;
 }
 
 .saibamais {
     background-color: transparent;
     height: 50px;
-    width: 300px;
+    width: 200px;
     text-decoration: none;
     color: white;
     border: 3px white solid;
     outline: none;
     border-radius: 30px;
     font-weight: bolder;
-    font-family: "Poppins";
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5vh;
-    margin-top: 1.5vh;
+    margin: 1.5vh 45% 0 45%;
     transition: 0.2s;
-    margin-left: 20%;
     cursor: pointer;
+}
+
+.saibamais:hover {
+    background-color: #01bf6a;
+    border: 3px #01bf6a solid;
 }
 
 
@@ -460,7 +471,7 @@
      outline: none;
      border-radius: 30px;
      font-weight: bolder;
-     font-family: "Poppins";
+     font-family: 'Poppins', sans-serif;
      font-size: 2.5vh;
      margin-top: 1.5vh;
      transition: 0.2s;
@@ -468,8 +479,8 @@
  }
 
 #btn_form:hover {
-    background: mediumseagreen;
-    border: solid 3px mediumseagreen;
+    background: #01bf6a;
+    border: solid 3px #01bf6a;
 }
 
 
