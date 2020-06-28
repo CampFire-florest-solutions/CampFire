@@ -37,11 +37,11 @@
                 <div class="icone" id="tres" title="Equipe">
                     <i class="fas fa-users"></i>
                 </div>
-            <a href="#contact">
-                <div class="icone" id="cinco" title="Contato">
-                    <i class="fas fa-envelope-open-text"></i>
-                </div>
-            </a>
+                <a href="#contact">
+                    <div class="icone" id="cinco" title="Contato">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                </a>
         </div>
     </div>
     <section class="home" id="home">
@@ -76,13 +76,14 @@
         </div>
         <div class="div_texto-video">
             <p>Nosso sistema funciona de uma forma simples, voce instala o nosso sensor na copa de uma arvore
-                ou no chao, e ja pode sair usado, nosso site ficara disponivel para uso intermitente, 
-                portando podera utiliza-lo para monitorara sua area, caso nao tenta entandido, assista nosso 
+                ou no chao, e ja pode sair usado, nosso site ficara disponivel para uso intermitente,
+                portando podera utiliza-lo para monitorara sua area, caso nao tenta entandido, assista nosso
                 video, onde o Tom ira explicar.
             </p>
-        
-         <iframe class="videozin" src="https://www.youtube.com/embed/amhDvAxzLrY" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe class="videozin" src="https://www.youtube.com/embed/amhDvAxzLrY" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
         </div>
     </section>
@@ -90,9 +91,19 @@
 
         <div class="intermedio">
             <div class="one">
-                <input type="radio" id="one3" name="webmaster" value="0" checked onchange="trocar()" />
-                <input type="radio" id="one1" name="webmaster" value="1" onchange="trocar()" />
-                <input type="radio" id="one2" name="webmaster" value="2" onchange="trocar()" />
+
+                <label class="container-radio">
+                    <input type="radio" checked="checked" id="one3" name="webmaster" value="0"  onchange="trocar()">
+                    <span class="marcador-selecao"></span>
+                </label>
+                <label class="container-radio">
+                    <input type="radio" id="one1" name="webmaster" value="1" onchange="trocar()">
+                    <span class="marcador-selecao"></span>
+                </label>
+                <label class="container-radio">
+                    <input type="radio" id="one2" name="webmaster" value="2" onchange="trocar()">
+                    <span class="marcador-selecao"></span>
+                </label>
                 <br>
                 <img src="imagens/integrantes/mathias.png" alt="" id="imgone" class="imgone">
                 <h2 id="texto1">Mathias Carvalho</h2>
@@ -110,9 +121,18 @@
 
             </div>
             <div class="tree">
-                <input id="tree3" type="radio" name="webmaster1" value="0" onchange="trocar2()" checked />
-                <input id="tree1" type="radio" name="webmaster1" value="1" onchange="trocar2()" />
-                <input id="tree2" type="radio" name="webmaster1" value="2" onchange="trocar2()" />
+                <label class="container-radio">
+                    <input type="radio" checked="checked" id="tree3" name="webmaster1" value="0"  onchange="trocar2()">
+                    <span class="marcador-selecao"></span>
+                </label>
+                <label class="container-radio">
+                    <input type="radio" id="tree1" name="webmaster1" value="1" onchange="trocar2()">
+                    <span class="marcador-selecao"></span>
+                </label>
+                <label class="container-radio">
+                    <input type="radio" id="tree2" name="webmaster1" value="2" onchange="trocar2()">
+                    <span class="marcador-selecao"></span>
+                </label>
                 <br>
                 <img src="imagens/integrantes/alexandre.png" alt="" id="imagetre" class="imgtree">
                 <h2 id="texto">Alexandre Diogo</h2>
