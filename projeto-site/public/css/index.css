@@ -402,7 +402,7 @@
 
  .box_home_item p {
      text-align: center;
-     font-size: 2vw;
+     font-size: 1.7vw;
      color: white;
      text-shadow: 0.2em 0.2em 0.3em #232323;
      font-family: 'Poppins', sans-serif;
@@ -567,4 +567,13 @@
      background-color: #ff000047;
      padding: 7px;
      border-radius: 5px;
+ }
+
+
+ /* TELA SAIBA MAIS */
+ 
+ .classsobre {
+     background-image: url(../imagens/fundos/home.jpg);
+     background-position: cover;
+     background-size: 100%;
  }
