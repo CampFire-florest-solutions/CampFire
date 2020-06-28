@@ -115,27 +115,26 @@
      float: right;
      height: 100vh;
      transition: 1s;
-     background: #232323;
+     background: rgb(37, 51, 52);
  }
 
  .video {
      width: 100%;
      float: right;
      height: 100vh;
-     background: white;
+     color: white;
+     background: rgb(37, 51, 52);
      transition: 1s;
-     border-top: #01bf6a 7px solid;
  }
 
  .contact {
      width: 100%;
      float: right;
      height: 100%;
-     background: #232323;
+     background: rgb(37, 51, 52);
      color: white;
      transition: 1s;
      font-family: 'Poppins', sans-serif;
-     border-top: #01bf6a 7px solid;
  }
 
  /*configurando a section team da pagina*/
