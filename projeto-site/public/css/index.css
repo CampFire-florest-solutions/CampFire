@@ -10,7 +10,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: rgb(0, 239, 242);
-    background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
+    background: linear-gradient(0deg, rgba(0, 239, 242, 0.5) 0%, #01bf6a 100%);
     border-radius: 10px;
 }
 
@@ -73,7 +73,7 @@ body {
     text-align: center;
     padding: 5%;
     background: rgb(0, 239, 242);
-    background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1) 100%);
+    background: linear-gradient(0deg, rgba(0, 239, 242, 1) 0%, rgba(0, 255, 158, 1)  100%);
 }
 
 .icone:hover {
@@ -105,7 +105,7 @@ body {
 .about {
     width: 100%;
     float: right;
-    height: 70vh;
+    height: auto;
     transition: 1s;
     background: rgb(37, 51, 52);
 }
@@ -121,7 +121,7 @@ body {
 .video {
     width: 100%;
     float: right;
-    height: 100vh;
+    height: auto;
     color: white;
     background: rgb(37, 51, 52);
     transition: 1s;
@@ -142,10 +142,10 @@ body {
 .intermedio {
     width: 80%;
     margin-left: 12%;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     background: transparent;
-    margin-top: 20vh;
+    margin-top: 18vh;
 }
 
 .one {
@@ -162,7 +162,8 @@ body {
     text-align: center;
     color: white;
     margin: 0.3%;
-    transition: 1s;
+    transition: 0.6s;
+    box-shadow: #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em;
 }
 
 .one img {
@@ -195,7 +196,8 @@ body {
     color: white;
     font-size: 1.3em;
     margin: 0.3%;
-    transition: 1s;
+    transition: 0.6s;
+    box-shadow: #01bf6a 0px 0px 0.2em, #01bf6a 0px 0px 0.2em, #01bf6a 0px 0px 0.2em;
 }
 
 .two h1 {
@@ -208,10 +210,12 @@ body {
 
 .one:hover {
     transform: scale(1.05);
+    box-shadow: #01bf6a 0px 0px 1em, #01bf6a 0px 0px 1em, #01bf6a 0px 0px 1em;
 }
 
 .tree:hover {
     transform: scale(1.05);
+    box-shadow: #01bf6a 0px 0px 1em, #01bf6a 0px 0px 1em, #01bf6a 0px 0px 1em;
 }
 
 .two h1 {
@@ -235,7 +239,8 @@ body {
     border-radius: 9px;
     text-align: center;
     margin: 0.3%;
-    transition: 1s;
+    transition: 0.6s;
+    box-shadow: #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em;
 }
 
 .intermedio a {
@@ -245,10 +250,11 @@ body {
 }
 
 .intermedio a:hover {
-    color: rgba(255, 255, 255, 0.6);
+    color: #01bf6a;
+    text-shadow: #01bf6a 0px 0px 0.2em;
 }
 
-/* o container  que quarda tos botoes */
+/* o container  que guarda todos botoes */
 .container-radio {
    display: inline;
    padding: 18px;
@@ -273,8 +279,8 @@ body {
    position: absolute;
    margin-top: 8px;
    /* margin-left: 118px; */
-   top: 26px;
-   left: 109px;
+   top: 4.2vh;
+   left: 9.5vw;
    height: 16px;
    width: 15px;
    background-color: #eee;
@@ -289,6 +295,7 @@ body {
 /*quando selecionado apresenta uma cor verde */
 .container-radio input:checked~.marcador-selecao {
    background-color: #00c16a;
+   box-shadow: #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.4em;
 }
 
 /* criando um indicador (o circulo no meio | é escondido quando nao esta marcado) */
@@ -351,13 +358,6 @@ body {
     text-align: center;
 }
 
-.textos .linha {
-    width: 100%;
-    background: mediumseagreen;
-    border-radius: 30px;
-    height: 3vh;
-}
-
 .more {
     width: 200px;
     height: 50px;
@@ -365,11 +365,12 @@ body {
     text-align: center;
     border: solid 3px white;
     color: white;
-    font-size: 1.5em;
+    font-size: 3.5vh;
+    font-weight: bold;
     background: transparent;
-    margin-left: 30vw;
+    margin-left: 39%;
     transition: 0.5s;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .more:hover {
@@ -388,48 +389,39 @@ body {
     font-size: 70px;
     line-height: 70px;
     margin-top: 10px;
-    color: rgba(0, 0, 0, 0.938);
+    color: white;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-family: serif;
+    margin-left: 2vw;
 }
 
-.texto_videozin span {
-    color: mediumseagreen;
-    font-size: 2em;
-}
-
-.texto_videozin .linha {
-    width: 60%;
-    background: mediumseagreen;
-    border-radius: 30px;
-    height: 3vh;
-    margin-left: 20%;
-}
 
 .div_texto-video p {
     text-align: -webkit-center;
-    font-size: 23px;
-    margin-top: 6vw;
-    margin-left: 17vw;
-    width: 23vw;
+    font-size: 1.4vw;
+    margin-top: 3vw;
+    margin-left: 13vw;
+    width: 30vw;
     float: left;
+    font-family: "Poppins", sans-serif;
 }
 
 .videozin {
     float: right;
     width: 47vw;
     height: 52vh;
-    margin-top: 8vh;
-    margin-right: 4vh;
+    margin-top: 6vh;
+    margin-right: 10vh;
     border-radius: 10px;
+    box-shadow: #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em, #01bf6a 0px 0px 0.6em;
 }
 
 /*configurando a section about da pagina*/
 
 .box_home {
     width: 86vw;
-    margin-left: 10vw;
+    margin-left: 9.2vw;
     height: auto;
     margin-top: 5vh;
     display: inline-flex;
@@ -456,10 +448,6 @@ body {
     margin-bottom: 4vh;
 }
 
-.image3 {
-    width: 20%;
-}
-
 .saibamais {
     background-color: transparent;
     height: 50px;
@@ -472,7 +460,9 @@ body {
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
     font-size: 2.5vh;
-    margin: 1.5vh 45% 0 45%;
+    margin-top: 6vh;
+    margin-left: 43.5%;
+    margin-bottom: 15vh;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -515,7 +505,7 @@ form label {
 }
 
 .input_padronizado:focus {
-    border-bottom: 2px #01bf6a solid
+    border-bottom: 2px #01bf6a solid;
 }
 
 .text_area {
@@ -588,7 +578,8 @@ form label {
 
 .icones_sociais i:hover {
     transform: scale(1.1);
-    opacity: 0.5;
+    color: #01bf6a;
+    text-shadow: #01bf6a 0px 0px 0.2em;
     transition: 0.2s;
 }
 
@@ -622,5 +613,140 @@ li {
 .classsobre {
     background-image: url(../imagens/fundos/home.jpg);
     background-position: cover;
+    background-attachment: fixed;
     background-size: 100%;
+    height: 100vh;
+    border-bottom: white 8px solid;
+}
+
+
+.parallax2 {
+        background-image: url(../imagens/fundos/3406980.png);
+        background-position: cover;
+        background-attachment: fixed;
+        background-size: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+}
+.simulador {
+    float: right;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    width: 40vw;
+    margin-right: 5vw;
+    margin-top: 20vh;
+    text-shadow: rgba(0, 0, 0, 0.781) 0.1em 0.1em 0.2em;
+}
+.simulador h1 {
+    font-size: 7vh;
+}
+.simulador p {
+    font-size: large;
+}
+.simulador input {
+    outline: none;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px #01bf6a solid;
+    transform: scale(1.3);
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+}
+.simulador input:focus {
+    border: 2px white solid;
+    box-shadow: #00c16a 0.1em 0.1em 0.5em;
+    transform: scale(1.5);
+}
+#textosimulador {
+    font-size: 20px;
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+}
+.opacity h1 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 8.5vh;
+    margin: 0;
+    text-align: center;
+    margin-top: 12vh;
+}
+
+.logosobre {
+    width: 10vw;
+    margin: 4vh 45vw;
+}
+.detals {
+    background-color: #232323;
+    height: auto;
+    margin: 0;
+}
+
+.containerdetals {
+     width: 80%;
+     margin: 0 10%;
+     color: white;
+     font-family: "Poppins", sans-serif;
+     display: grid;
+
+}
+
+.containerdetals h1 {
+    font-size: 3vw;
+}
+.containerdetals p {
+    font-size: 1.6vw;
+}
+.instalacao {
+    margin: 2.5vh 0;
+}
+.mapeamento {
+    margin: 2.5vh 0;
+}
+.mapeamento img {
+    float: right;
+    width: 35vw;
+}
+
+.textomap {
+    float: left;
+    width: 35vw;
+}
+
+.instalacao img {
+    float: left;
+    width: 20vw;
+}
+.textoinsta {
+    float: right;
+    width: 35vw;
+}
+
+.dashboardsobre {
+     margin: 2.5vh 0;
+}
+
+.dashboardsobre img {
+    float: right;
+    width: 20vw;
+}
+.textodash {
+    float: left;
+    width: 35vw;
+}
+.alertasobre {
+    margin: 2.5vh 0;
+}
+.alertasobre img {
+    float: left;
+    width: 20vw;
+}
+
+.textoalerta {
+    float: right;
+    width: 35vw;
 }

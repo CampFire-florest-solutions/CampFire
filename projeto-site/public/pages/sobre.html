@@ -2,16 +2,87 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="shortcut icon" href="../imagens/icons/logo.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/2ef5c473af.js" crossorigin="anonymous"></script>
-    <title>Campfire</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="shortcut icon" href="../imagens/icons/logo.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/2ef5c473af.js" crossorigin="anonymous"></script>
+  <title>Campfire</title>
 </head>
 
 <body>
   <section class="classsobre">
+    <div class="opacity">
+      <img src="../imagens/logo.png" alt="" class="logosobre">
+      <h1>A solução que protege a natureza</h1>
+    </div>
+  </section>
+  <section class="detals">
+    <div class="containerdetals">
+      <p>Ao contratar o nosso sistema para sua propriedade algumas etapas serão feitas para que a proteção da sua propriedade
+        seja
+        feita na maior confiabilidade das informações</p>
+      <div class="mapeamento">
+        <div class="textomap">
+        <h1>Mapeamento</h1>
+        <p>O mapeamento é uma etapa importante, pois com sua área mapeada podemos definir onde cada sensor será
+          posicionado ao longo da propriedade de acordo com a topografia do terreno.</p>
+     </div>
+      <img src="../imagens/28097 [Convertido].png" alt="">
+     </div>
+      <div class="instalacao">
+        <div class="textoinsta">
+        <h1>Instalação</h1>
+        <p>Definindo os lugares onde os sensores ficarão, a instalação é o próximo passo, onde cada sensor será
+          instalado respeitando a área de alcance de 1.256 m² de cada sensor. Além dos sensores, o servidor e todos os
+          subsistemas serão instalados para que os registros sejam salvos no Banco de Dados em nuvem </p>
+          </div>
+        <img src="../imagens/motion-sensor.png" alt="">
+      </div>
+      <div class="dashboardsobre">
+        <div class="textodash">
+        <h1>Dashboard</h1>
+        <p>Com os registros de temperatura e umidade estando armazenados em nuvem, você terá uma área do cliente
+          dedicada a fornecer esses registros através de um Dashboard especial e totalmente pensado para
+          que as informações sejam dispostas da melhor maneira para você, com gráficos atualizados em tempo real podendo
+          você analisar remotamente esses gráficos.</p>
+        </div>
+          <img src="../imagens/report.png" alt="">
+        
+      </div>
+      <div class="alertasobre">
+        <div class="textoalerta">
+        <h1>Alerta</h1>
+        <p>Caso seja registrado algum foco de calor, nosso sistema irá apontar onde foi registrado e quais temperaturas
+          e umidades foram registrados. Mas não se preocupe se você não estiver logado para ver esse registro, pois ao
+          ser registrado um foco de calor, automaticamente será enviado um alerta em seu smartphone via SMS e E-mail
+          contendo as informações necessárias para que as medidas de controle ou contenção sejam tomadas.</p>
+        </div>
+          <img src="../imagens/statistics.png" alt="">
+      </div>
+    </div>
 
   </section>
+  <section class="parallax2">
+    <div class="simulador">
+      <h1>Simulador Financeiro</h1>
+      <p>Faça agora a simulação dos custos para a instalação do nosso sistema em sua propriedade.</p>
+      <p>Insira o diamêtro da sua propriedade em km²:</p>
+      <input type="number" id="area" class="inpt" placeholder="" onkeyup="calculo()">
+      <br><br>
+      <div id="textosimulador"></div>
+    </div>
+  </section>
+  <section style="display: none;">
+
+  </section>
+
 </body>
+<script>
+  function calculo() {
+    var calculo_hectare = Number(area.value) * 50;
+    var arduino_P_m2 = calculo_hectare / 5;
+    var preco_instalacao = Number(35) * arduino_P_m2;
+    textosimulador.innerHTML = `De acordo com sua areá serão instalados: <span style="color:#01bf6a"> ${arduino_P_m2} sensores </span> e isso custará: <span style="color:#01bf6a;">R$${preco_instalacao.toFixed(2)}</sapam>`
+  }
+</script>
