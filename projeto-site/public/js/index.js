@@ -91,7 +91,7 @@ function mover() {
 }
 
 function acesso() {
-    location.href = 'pages/login.html';
+    location.href = 'login.html';
 }
 
 function digitar() {

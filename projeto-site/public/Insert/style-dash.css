@@ -1,0 +1,331 @@
+body {
+    background-color: #0c1020;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    max-height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #008080;
+    border-radius: 20px;
+}
+
+.menu-lateral {
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #121a2f;
+    z-index: 10;
+}
+
+.menu-lateral h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: teal;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-top: 20%;
+    margin-bottom: 40%;
+}
+
+.logout {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 0;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logout:hover {
+    background: #0c1020;
+}
+
+.logout p {
+    font-size: 1.6em;
+    font-family: sans-serif;
+    color: teal;
+    margin-left: 20px;
+}
+
+.logout img {
+    width: 27%;
+}
+
+.menu-superior {
+    position: fixed;
+    width: 85vw;
+    right: 0;
+    height: 15vh;
+    top: 0;
+    background-color: #152235;
+    z-index: 5;
+}
+
+.content-info {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 26vh;
+    margin-top: 19vh;
+}
+
+.content-info .box {
+    background-color: #152235;
+    height: 98%;
+    width: 23%;
+    margin-left: 1%;
+    border-radius: 5px;
+}
+
+.content-info .box.one {
+    margin-left: 2%;
+}
+
+.content-grafico {
+    width: 80.6vw;
+    background-color: rgb(21, 34, 53);
+    float: right;
+    margin-right: 2.5vh;
+    height: 60vh;
+    margin-top: 3vh;
+}
+
+.desc-user {
+    position: absolute;
+    top: 35%;
+    right: 1%;
+    width: 20%;
+    color: teal;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    background: #0c1020;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 5vh;
+}
+
+.foto_user {
+    width: 7%;
+    height: 80%;
+    position: absolute;
+    top: 9%;
+    background-color: #0c1020;
+    border-radius: 100%;
+    right: 20%;
+}
+
+.icones-menu {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 20%;
+    color: #008080;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 85%;
+}
+
+.icones-menu img {
+    width: 15%;
+    transition: 1s;
+    margin-left: 15%;
+    cursor: pointer;
+}
+
+.icones-menu img:hover {
+    transform: scale(1.2);
+}
+
+.content-topicos {
+    width: 100%;
+    height: 12vh;
+    margin-top: 10%;
+}
+
+.content-topicos:hover {
+    background: #0c1020;
+}
+
+.content-topicos img {
+    width: 20%;
+    cursor: pointer;
+}
+
+.content-topicos p {
+    font-size: 1.6em;
+    font-family: sans-serif;
+    color: gray;
+    margin-left: 20px;
+}
+
+.content-topicos a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone {
+    float: left;
+    width: 30%;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+.desc {
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+}
+
+.desc p {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+    color: gray;
+}
+
+.desc h6 {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3.5em;
+    font-weight: 100;
+    margin: 0;
+    color: gray;
+}
+
+.desc h5 {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
+    margin: 0;
+    color: gray;
+}
+
+.aguarde {
+    font-family: sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    color: gray;
+}
+
+.content-area {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 80vh;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+.foto-area {
+    width: 63%;
+    height: 100%;
+    background-image: url(imagens/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1.5vw;
+}
+
+.progress-bar {
+    width: 30%;
+    height: 100%;
+    background-color: #152235;
+    margin-left: 1vw;
+}
+
+.content_grafico {
+    width: 81.5vw;
+    height: 75vh;
+    background: transparent;
+    float: right;
+    margin-top: 3vh;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafico_temperatura {
+    width: 49.5%;
+    background: #152235;
+    height: 95%;
+    margin-left: 1%;
+}
+
+.grafico_umidade {
+    width: 49.5%;
+    margin-right: 1.5%;
+    margin-left: 2%;
+    background: #152235;
+    height: 95%;
+}
+
+.titulo_grafico {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+    color: #008080;
+    margin-left: 20px;
+    font-family: sans-serif;
+    float: left;
+    font-size: 1.4em;
+}
+
+.titulo-insert {
+    width: 80vw;
+    height: 20vh;
+    background-color: #121a2f;
+    float: right;
+    margin-right: 2vw;
+    border-radius: 3px;
+    margin-top: 19vh;
+}
+
+.titulo-insert h1 {
+    width: 100%;
+    color: gray;
+    font-size: 3em;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.info {
+    display: inline;
+    margin-left: 80px;
+    color: grey;
+}

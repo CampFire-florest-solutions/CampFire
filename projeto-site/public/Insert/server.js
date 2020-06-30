@@ -14,5 +14,6 @@ app.use((request, response, next) => {
 
 app.use('/api', require('./app/controller'));
 
-const server = app.listen(3030);
-console.log('server rodando na porta', server.address().port);
+app.listen(5050, () => {
+    console.log('servidor rodando');
+});

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="style-dash.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord - CampFire</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body onload="startTime()">
+    <div class="menu-lateral">
+        <h1>Dashbord</h1>
+        <div class="content-topicos">
+            <a href="../dashboard-home.html"> <img src="imagens/home.png" alt="">
+                <p>Inicial</p>
+            </a>
+        </div>
+        <div class="content-topicos">
+            <a href=""> <img src="imagens/perfil.png" alt="">
+                <p>perfil</p>
+            </a>
+        </div>
+        <div class="content-topicos">
+            <a href="#"> <img src="imagens/add.png" alt="">
+                <p>Insert</p>
+            </a>
+        </div>
+
+
+        <a href="../login.html" class="logout"><img src="imagens/logout.png" alt="">
+            <p>Logout</p>
+        </a>
+    </div>
+
+    <div class="menu-superior">
+        <div class="desc-user"><b id="b_usuario">Aleh Nascimento</b></div>
+        <img src="imagens/user.png" alt="" class="foto_user">
+        <div class="icones-menu">
+            <img src="imagens/bell.png" alt="" class="">
+            <img src="imagens/phone.png" alt="">
+        </div>
+    </div>
+
+    <div class="titulo-insert">
+        <h1>Inserindo dados</h1>
+    </div>
+
+    <div class="content_grafico">
+        <div class="grafico_temperatura">
+            <h1 class="titulo_grafico temperatura">Grafico de Temperatura</h1>
+            <div>
+
+                <section>
+                    <h2 class="info">Média: <label id='average'>0.00</label></h2>
+                    <h2 class="info">Média Hora: <label id='averageHour'>0.00</label></h2>
+                </section>
+                <section style="width:98%">
+                    <canvas id="chart"></canvas>
+                    <section>
+            </div>
+        </div>
+        <div class="grafico_umidade">
+            <h1 class="titulo_grafico umidade">Grafico de Umidade</h1>
+            <div>
+                <section>
+
+                    <h2 class="info">Média: <label id='averageHumidity'>0.00</label></h2>
+                    <h2 class="info">Média Hora: <label id='averageHourHumidity'>0.00</label></h2>
+                </section>
+                <section style="width:98% ">
+                    <canvas id="chart-humidity"></canvas>
+                    <section>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var context = document.getElementById("chart").getContext("2d");
+    context.canvas.width = 1000;
+    context.canvas.height = 700;
+
+    var configuration = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: "Temperatura x Tempo",
+                type: 'line',
+                borderColor: ['#fc2f2f'],
+                backgroundColor: ['transparent']
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    //type: 'value',
+                    distribution: 'series',
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperatura'
+                    },
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            animation: {
+                duration: 500
+            }
+        }
+    };
+
+    var chart = new Chart(context, configuration);
+
+    //Função para obter os dados de temperatura do server
+
+    //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+    //hora de montar/atualizar o gráfico
+    this.lastIndexTemp = 0;
+    this.time = 0;
+
+    function get_data() {
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:5050/api', false);
+        http.send(null);
+
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0) {
+            return;
+        }
+        // var kk = JSON.parse(http.response);
+        // kk = kk.data
+        // kk = kk[kk.length - 1]
+        // console.log(kk)
+
+
+
+        var _lastIndexTemp = this.lastIndexTemp;
+
+        this.lastIndexTemp = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        listTemp.forEach(data => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            chart.data.labels.push(this.time++);
+            chart.data.datasets[0].data.push(parseFloat(data));
+            chart.update();
+        });
+
+        document.getElementById('average').textContent = obj.average;
+        document.getElementById('averageHour').textContent = obj.averageHour;
+
+
+    }
+
+    //Second Graphic
+
+    var context2 = document.getElementById("chart-humidity").getContext("2d");
+    context2.canvas.width = 1000;
+    context2.canvas.height = 700;
+
+    var humidity = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: "Humidade x Tempo",
+                type: 'line',
+                borderColor: ['#008080'],
+                backgroundColor: ['transparent']
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    //type: 'value',
+                    distribution: 'series',
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Humidade'
+                    },
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            animation: {
+                duration: 500
+            }
+        }
+    };
+
+    var chartHumidity = new Chart(context2, humidity);
+
+    //Função para obter os dados de temperatura do server
+
+
+    //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+    //hora de montar/atualizar o gráfico
+    this.lastIndexTempHumidity = 0;
+    this.timeHumidity = 0;
+
+    function get_dataHumidity() {
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:5050/api/humidity', false);
+        http.send(null);
+
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0) {
+            return;
+        }
+        // var vv = JSON.parse(http.response);
+        // vv = vv.data
+        // vv = vv[vv.length - 1]
+        // console.log(vv)
+
+        var _lastIndexTemp = this.lastIndexTempHumidity;
+        this.lastIndexTempHumidity = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        listTemp.forEach(data => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (chartHumidity.data.labels.length == 10 && chartHumidity.data.datasets[0].data.length == 10) {
+                chartHumidity.data.labels.shift();
+                chartHumidity.data.datasets[0].data.shift();
+            }
+
+            chartHumidity.data.labels.push(this.time++);
+            chartHumidity.data.datasets[0].data.push(parseFloat(data));
+            chartHumidity.update();
+        });
+
+        document.getElementById('averageHumidity').textContent = obj.average;
+        document.getElementById('averageHourHumidity').textContent = obj.averageHour;
+    }
+
+    get_dataHumidity();
+
+
+    function sendTemperature() {
+        var http = new XMLHttpRequest();
+        http.open('POST', 'http://localhost:5050/api/sendData', false);
+        http.send(null);
+    }
+
+
+
+
+    setInterval(() => {
+        get_data();
+        get_dataHumidity();
+
+        sendTemperature();
+    }, 5000);
+</script>

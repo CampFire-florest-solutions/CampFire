@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-dash.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord - CampFire</title>
+
+
+
+</head>
+
+<body onload="atualizarGrafico();">
+
+    <div class="menu-lateral">
+        <h1>Dashbord</h1>
+        <div class="content-topicos">
+            <a href="#"> <img src="imagens/home.png" alt="">
+                <p>Inicial</p>
+            </a>
+        </div>
+        <div class="content-topicos">
+            <a href=""> <img src="imagens/perfil.png" alt="">
+                <p>perfil</p>
+            </a>
+        </div>
+        <div class="content-topicos">
+            <a href="Insert/Inicial.html"> <img src="imagens/add.png" alt="">
+                <p>Insert</p>
+            </a>
+        </div>
+
+
+        <a href="#" onclick="logoff()" class="logout"><img src="imagens/logout.png" alt="">
+            <p>Logout</p>
+        </a>
+    </div>
+
+    <div class="menu-superior">
+        <div class="desc-user"><b id="b_usuario">Aleh Nascimento</b></div>
+        <img src="imagens/user.png" alt="" class="foto_user">
+        <div class="icones-menu">
+            <img src="imagens/bell.png" alt="" onclick="noti()" class="">
+            <a href="dashboard-home.html#contato"> <img src="imagens/phone.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="content-info">
+        <div class="box one">
+            <img src="imagens/temperature.png" alt="" class="icone">
+            <div class="desc">
+                <p>Temperatura</p>
+                <h6> <span id="temp_div"><span>°</span></h6>
+            </div>
+        </div>
+        <div class="box">
+            <img src="imagens/water.png" alt="" class="icone">
+            <div class="desc">
+                <p>Umidade</p>
+                <h6><span id="umid_div"></span><span>%</span></h6>
+            </div>
+        </div>
+        <div class="box">
+            <img src="imagens/sensor.png" alt="" class="icone">
+            <div class="desc">
+                <p>Sensores</p>
+                <h6>90</h6>
+            </div>
+        </div>
+        <div class="box">
+            <img src="imagens/search.png" alt="" class="icone">
+            <div class="desc">
+                <p>Staus</p>
+                <h5>Normal</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-grafico">
+        <div>
+
+        </div>
+        <div style="width:75%;">
+            <div id="div_aguarde" class="aguarde">Dados sendo obtidos...</div>
+            <canvas id="canvas_grafico"></canvas>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="foto-area">
+            <h3 id="hora"></h3>
+            <div class="desc-area">
+                <p>Area:<span>1km²</span> Sensores:<span>95</span></p>
+            </div>
+
+        </div>
+        <div class="progress-bar" id="contato">
+            <form action="" class="help">
+                <h1>Contato</h1>
+                <input type="text" placeholder="Nome">
+                <textarea placeholder="Digite Sua Mensagem Aqui..."></textarea>
+                <button>Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="notification" id="notificacao">
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- scripts do Chart.js e pagina-->
+<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+<script type="text/javascript" src="funcoes.js"></script>
+
+<script src="dashboard-confg.js"></script>
+
+<script>
+    window.onload = obterDadosGrafico;
+
+    verificar_autenticacao();
+
+    function noti() {
+        if (notificacao.style.display == "none") {
+
+            notificacao.style.display = "block";
+
+        } else {
+            notificacao.style.display = "none";
+        }
+
+    }
+
+    console.log(novoRegistro.temperatura)
+        // neste JSON tem que ser 'labels', 'datasets' etc, 
+        // porque é o padrão do Chart.js
+    var dados = {
+        labels: [],
+        datasets: [{
+            yAxisID: 'y-temperatura',
+            label: 'Temperatura',
+            borderColor: window.chartColors.red,
+            backgroundColor: window.chartColors.red,
+            fill: false,
+            data: []
+        }, {
+            yAxisID: 'y-umidade',
+            label: 'Umidade',
+            borderColor: window.chartColors.blue,
+            backgroundColor: window.chartColors.blue,
+            fill: false,
+            data: []
+        }]
+    };
+
+
+    // só mexer se quiser alterar o tempo de atualização
+    // ou se souber o que está fazendo!
+    function atualizarGrafico() {
+
+        fetch('/leituras/tempo-real', {
+                cache: 'no-store'
+            }).then(function(response) {
+                if (response.ok) {
+                    response.json().then(function(novoRegistro) {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+
+                        // tirando e colocando valores no gráfico
+                        dados.labels.shift(); // apagar o primeiro
+                        dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
+                        dados.datasets[0].data.shift(); // apagar o primeiro de temperatura
+                        dados.datasets[1].data.shift(); // apagar o primeiro de umidade
+                        dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
+                        dados.datasets[1].data.push(novoRegistro.umidade); // incluir uma nova leitura de umidade
+                        window.grafico_linha.update();
+                        //  umid_div.innerHTML = `${novoRegistro.umidade}`;
+                        //  temo_div.innerHTML = `${novoRegistro.temperatura}`;
+                        setTimeout(atualizarGrafico, 5000);
+                    });
+
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                    setTimeout(atualizarGrafico, 5000);
+                }
+            })
+            .catch(function(error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    // altere aqui as configurações do gráfico
+    // (tamanhos, cores, textos, etc)
+    function configurarGrafico() {
+        var configuracoes = {
+            responsive: true,
+            animation: {
+                duration: 500
+            },
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+                display: true,
+                text: 'Histórico recente de temperatura e umidade'
+            },
+            scales: {
+                yAxes: [{
+                    type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                    display: true,
+                    position: 'left',
+                    id: 'y-temperatura',
+                }, {
+                    type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                    display: true,
+                    position: 'right',
+                    id: 'y-umidade',
+
+                    // grid line settings
+                    gridLines: {
+                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    },
+                }],
+            }
+        };
+
+        return configuracoes;
+    }
+
+    // altere aqui como os dados serão exibidos
+    // e como são recuperados do BackEnd
+    function obterDadosGrafico() {
+
+        fetch('/leituras/ultimas', {
+                cache: 'no-store'
+            }).then(function(response) {
+                if (response.ok) {
+                    response.json().then(function(resposta) {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        resposta.reverse();
+
+                        for (i = 0; i < resposta.length; i++) {
+                            var registro = resposta[i];
+
+                            // aqui, após 'registro.' use os nomes 
+                            // dos atributos que vem no JSON 
+                            // que gerou na consulta ao banco de dados
+
+                            dados.labels.push(registro.momento_grafico);
+
+                            dados.datasets[0].data.push(registro.temperatura);
+                            dados.datasets[1].data.push(registro.umidade);
+                        }
+                        console.log(JSON.stringify(dados));
+
+                        div_aguarde.style.display = 'none';
+
+                        plotarGrafico(dados);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function(error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    // só altere aqui se souber o que está fazendo!
+    function plotarGrafico(dados) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Line(ctx, {
+            data: dados,
+            options: configurarGrafico()
+        });
+
+        setTimeout(atualizarGrafico, 5000);
+    }
+</script>

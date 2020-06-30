@@ -1,0 +1,422 @@
+body {
+    background-color: #0c1020;
+    margin: 0;
+    scroll-behavior: smooth;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    max-height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #008080;
+    border-radius: 20px;
+}
+
+.menu-lateral {
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #121a2f;
+    z-index: 10;
+}
+
+.menu-lateral h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: teal;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-top: 20%;
+    margin-bottom: 40%;
+}
+
+.logout {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 0;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logout:hover {
+    background: #0c1020;
+}
+
+.logout p {
+    font-size: 1.6em;
+    font-family: sans-serif;
+    color: teal;
+    margin-left: 20px;
+}
+
+.logout img {
+    width: 27%;
+}
+
+.menu-superior {
+    position: fixed;
+    width: 85vw;
+    right: 0;
+    height: 15vh;
+    top: 0;
+    background-color: #152235;
+    z-index: 5;
+}
+
+.content-info {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 26vh;
+    margin-top: 19vh;
+}
+
+.content-info .box {
+    background-color: #152235;
+    height: 98%;
+    width: 23%;
+    margin-left: 1%;
+    border-radius: 5px;
+}
+
+.content-info .box.one {
+    margin-left: 2%;
+}
+
+.content-grafico {
+    width: 80.6vw;
+    background-color: rgb(21, 34, 53);
+    float: right;
+    margin-right: 2.5vh;
+    height: 60vh;
+    margin-top: 3vh;
+}
+
+.desc-user {
+    position: absolute;
+    top: 35%;
+    right: 1%;
+    width: 20%;
+    color: teal;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    background: #0c1020;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 5vh;
+}
+
+.foto_user {
+    width: 7%;
+    height: 80%;
+    position: absolute;
+    top: 9%;
+    background-color: #0c1020;
+    border-radius: 100%;
+    right: 20%;
+}
+
+.icones-menu {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 20%;
+    color: #008080;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 85%;
+}
+
+.icones-menu img {
+    width: 15%;
+    transition: 1s;
+    margin-left: 15%;
+    cursor: pointer;
+}
+
+.icones-menu img:hover {
+    transform: scale(1.2);
+}
+
+.content-topicos {
+    width: 100%;
+    height: 12vh;
+    margin-top: 10%;
+}
+
+.content-topicos:hover {
+    background: #0c1020;
+}
+
+.content-topicos img {
+    width: 20%;
+    cursor: pointer;
+}
+
+.content-topicos p {
+    font-size: 1.6em;
+    font-family: sans-serif;
+    color: gray;
+    margin-left: 20px;
+}
+
+.content-topicos a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone {
+    float: left;
+    width: 30%;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+.desc {
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+}
+
+.desc p {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+    color: gray;
+}
+
+.desc h6 {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3.5em;
+    font-weight: 100;
+    margin: 0;
+    color: gray;
+}
+
+.desc h5 {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
+    margin: 0;
+    color: gray;
+}
+
+.aguarde {
+    font-family: sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    color: gray;
+}
+
+.content-area {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 80vh;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+.foto-area {
+    width: 63%;
+    height: 100%;
+    background-image: url(imagens/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1.5vw;
+}
+
+.progress-bar {
+    width: 30%;
+    height: 100%;
+    background-color: #152235;
+    margin-left: 1vw;
+}
+
+.box-acesso {
+    width: 60%;
+    height: 90vh;
+    background: #152235;
+    box-shadow: 0 10px 30px black;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.box-acesso input {
+    background-color: transparent;
+    border: none;
+    width: 60%;
+    margin-top: 50px;
+    outline: none;
+    font-size: 2em;
+    color: grey;
+    margin-left: 20%;
+    font-family: sans-serif;
+    border-bottom: 5px solid gray;
+    transition: 0.5s;
+    text-align: unset;
+}
+
+.box-acesso input:focus {
+    color: #008080;
+    border-bottom: 5px solid #008080;
+}
+
+.box-acesso h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: grey;
+}
+
+.botaozin {
+    width: 300px;
+    height: 8vh;
+    margin-top: 50px;
+    background: teal;
+    margin-left: 30%;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    color: white;
+}
+
+.botaozin:hover {
+    background: teal;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px black;
+}
+
+.loding {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    z-index: 100;
+    left: 22%;
+}
+
+.help {
+    width: 100%;
+    height: 100%;
+}
+
+.help h1 {
+    color: teal;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.help input {
+    width: 95%;
+    margin-left: 3%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8em;
+    color: grey;
+    border-bottom: 3px solid grey;
+}
+
+.help input:focus {
+    color: teal;
+    border-bottom: 3px solid teal;
+}
+
+.help textarea:focus {
+    color: teal;
+}
+
+.help textarea {
+    width: 95%;
+    outline: none;
+    margin-left: 3%;
+    background-color: transparent;
+    border: none;
+    height: 57%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: grey;
+    size: none;
+}
+
+.help button {
+    width: 100%;
+    height: 10%;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+    background-color: teal;
+    color: white;
+}
+
+.desc-area {
+    position: absolute;
+    top: 1150px;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.desc-area p {
+    width: 730px;
+    text-align: center;
+}
+
+.notification {
+    position: fixed;
+    top: 16vh;
+    width: 27%;
+    overflow: auto;
+    left: 22%;
+    display: none;
+    background-color: #0c1020;
+    height: 40vh;
+}
+
+.desc-area span {
+    color: teal;
+    margin-right: 50px;
+}
